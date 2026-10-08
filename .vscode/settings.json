@@ -60,12 +60,12 @@
         "*.asset": "yaml",
         "*.meta": "yaml",
         "*.prefab": "yaml",
-        "*.unity": "yaml",
+        "*.unity": "yaml"
     },
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Tellus.slnx"
+    "dotnet.defaultSolution": "Tellus-Project-Team-5-2026-10-07-19-06-39.slnx"
 }
