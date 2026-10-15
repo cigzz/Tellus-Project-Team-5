@@ -1,0 +1,226 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6639266748718144700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3358886322420598222}
+  - component: {fileID: 3415766052512340428}
+  - component: {fileID: 4800832243649646006}
+  - component: {fileID: 845170405508920718}
+  - component: {fileID: -6751136019835629927}
+  - component: {fileID: 3501312601969066084}
+  - component: {fileID: -5459432070578480567}
+  - component: {fileID: -4827905665957843889}
+  - component: {fileID: 9009975486276959313}
+  - component: {fileID: -5243508480442094564}
+  - component: {fileID: -2579479405408429574}
+  m_Layer: 0
+  m_Name: BIOME PREFAB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3358886322420598222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639266748718144700}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.437998, y: -1.1172266, z: -0.15582287}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3415766052512340428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639266748718144700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59b68151e5a1394ca56002f970c5245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeSelector: {fileID: 0}
+  biomeCoresArray: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  terrainArrayIteratorNumForTiles: 0
+  terrainArrayIteratorNumForCores: 0
+  canExpandThisBiome: 1
+  isGrassBiome: 1
+  isSandBiome: 0
+  biomeID: 0
+  riverScript: {fileID: 4800832243649646006}
+  riverSandScript: {fileID: 845170405508920718}
+  forestScript: {fileID: -6751136019835629927}
+  sandRocksScript: {fileID: 3501312601969066084}
+  cactusScript: {fileID: -5459432070578480567}
+  palmTreeScript: {fileID: -4827905665957843889}
+  jungleRocksScript: {fileID: 9009975486276959313}
+  flowersScript: {fileID: -5243508480442094564}
+  biomeSize: 0
+  chooseTileScript: {fileID: -2579479405408429574}
+--- !u!114 &4800832243649646006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639266748718144700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc9bd76401c2d549802ffa8d3dd5b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeSelector: {fileID: 0}
+  biomeScript: {fileID: 3415766052512340428}
+  chooseTileScript: {fileID: -2579479405408429574}
+  valuesAdjusterScript: {fileID: 0}
+--- !u!114 &845170405508920718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639266748718144700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc45d690ad3ba74985dd18532626e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeSelector: {fileID: 0}
+  biomeScript: {fileID: 3415766052512340428}
+  chooseTileScript: {fileID: -2579479405408429574}
+  valuesAdjusterScript: {fileID: 0}
+--- !u!114 &-6751136019835629927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639266748718144700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920c0833296c49e469caad5803ba75c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeSelector: {fileID: 0}
+  biomeScript: {fileID: 3415766052512340428}
+  chooseTileScript: {fileID: -2579479405408429574}
+  valuesAdjusterScript: {fileID: 0}
+--- !u!114 &3501312601969066084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639266748718144700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec69e7f28dd63b499a33a6fbd507218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeSelector: {fileID: 0}
+  biomeScript: {fileID: 3415766052512340428}
+  chooseTileScript: {fileID: -2579479405408429574}
+  valuesAdjusterScript: {fileID: 0}
+--- !u!114 &-5459432070578480567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639266748718144700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7669fb5df0b40d442aa1f4afed2462f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeSelector: {fileID: 0}
+  biomeScript: {fileID: 3415766052512340428}
+  chooseTileScript: {fileID: -2579479405408429574}
+  valuesAdjusterScript: {fileID: 0}
+--- !u!114 &-4827905665957843889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639266748718144700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a28fdec5416b948a4abc74de2348be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeSelector: {fileID: 0}
+  biomeScript: {fileID: 3415766052512340428}
+  chooseTileScript: {fileID: -2579479405408429574}
+  valuesAdjusterScript: {fileID: 0}
+--- !u!114 &9009975486276959313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639266748718144700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8008f8f36193a4fb60a5f3fc5a0c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeSelector: {fileID: 0}
+  biomeScript: {fileID: 3415766052512340428}
+  chooseTileScript: {fileID: -2579479405408429574}
+  valuesAdjusterScript: {fileID: 0}
+--- !u!114 &-5243508480442094564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639266748718144700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08278f6c08f3cd4aa0333e677858e9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeSelector: {fileID: 0}
+  biomeScript: {fileID: 3415766052512340428}
+  chooseTileScript: {fileID: -2579479405408429574}
+  valuesAdjusterScript: {fileID: 0}
+--- !u!114 &-2579479405408429574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639266748718144700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e8cb70ad2a1a04b8dd4401c60a7ffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeSelector: {fileID: 0}
+  biomeScript: {fileID: 3415766052512340428}
+  riverScript: {fileID: 4800832243649646006}
+  riverSandScript: {fileID: 845170405508920718}
+  forestScript: {fileID: -6751136019835629927}
+  sandRocksScript: {fileID: 3501312601969066084}
+  cactusScript: {fileID: -5459432070578480567}
+  palmTreeScript: {fileID: -4827905665957843889}
+  jungleRocksScript: {fileID: 9009975486276959313}
+  flowersScript: {fileID: -5243508480442094564}
+  numForTileInArray: 0
+  tilesIterated: 0
+  valuesAdjusterScript: {fileID: 0}

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e32438ed3d0ea6c4b96f47a0464c9e00
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 319837
+  packageName: Procedural Map Generator + Free 2D Asset Pack
+  packageVersion: 1.0
+  assetPath: Assets/PP/Procedural Map Generator + Free 2D Asset Pack/Scripts/mapGenerator.cs
+  uploadId: 758291

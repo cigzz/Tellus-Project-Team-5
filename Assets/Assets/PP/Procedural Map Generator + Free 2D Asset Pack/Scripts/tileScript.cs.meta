@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c9a6c8e06ce3a6348b32a46410ee94d6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 319837
+  packageName: Procedural Map Generator + Free 2D Asset Pack
+  packageVersion: 1.0
+  assetPath: Assets/PP/Procedural Map Generator + Free 2D Asset Pack/Scripts/tileScript.cs
+  uploadId: 758291
