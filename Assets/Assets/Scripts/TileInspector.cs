@@ -78,18 +78,20 @@ namespace WorldSim
         {
             int index = grid.Index(x, y);
             var sb = new StringBuilder();
-            sb.AppendLine($"Tile ({x}, {y})");
+            sb.Append($"({x}, {y}), ");
 
             IEnumerable<string> fieldsToShow = Mode == TileInspectorMode.Debug ? grid.FieldNames : standardFields; 
 
             foreach (string fieldName in fieldsToShow)
             {
                 if (!grid.HasField(fieldName)) continue; // not created yet (e.g. no plant ever placed here)
+                Debug.Log(fieldName);
                 float value = grid.GetField(fieldName)[index];
-                sb.AppendLine($"{fieldName}: {value:0.00}");
+                sb.Append($"{fieldName}: {value:0.00}, ");
+                Debug.Log(value);
             }
 
-            return sb.ToString();
+            return ((sb.ToString())[..^2]);
         }
 
         void Show(string text) // show tooltip
