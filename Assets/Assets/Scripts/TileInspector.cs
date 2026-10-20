@@ -85,10 +85,10 @@ namespace WorldSim
             foreach (string fieldName in fieldsToShow)
             {
                 if (!grid.HasField(fieldName)) continue; // not created yet (e.g. no plant ever placed here)
-                Debug.Log(fieldName);
+                // Debug.Log(fieldName);
                 float value = grid.GetField(fieldName)[index];
                 sb.Append($"{fieldName}: {value:0.00}, ");
-                Debug.Log(value);
+                // Debug.Log(value);
             }
 
             return ((sb.ToString())[..^2]);
