@@ -33,6 +33,11 @@ namespace WorldSim
             var tickEngine = GetComponent<TickEngine>();
             tickEngine.Init(grid);
 
+            // World clock - counts 1 in-game second every 8 ticks
+            var clock = GetComponent<WorldClock>();
+            if (clock == null) clock = gameObject.AddComponent<WorldClock>();
+            tickEngine.AddSystem(clock);
+
             // every tick, order matters
             tickEngine.AddSystem(new WaterSystem());
             tickEngine.AddSystem(new TemperatureSystem());
