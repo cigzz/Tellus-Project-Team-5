@@ -16,34 +16,40 @@ namespace WorldSim
         [SerializeField] float minHeight = 0f;   // height for pure black
         [SerializeField] float maxHeight = 100f; // height for pure white
 
+        [Header("Plant model (Tellus Growth Model)")]
+        // The doc's rates assume 10 fast ticks per second and a slow tick every 10th fast tick.
+        // Set the TickEngine to Ticks Per Second = 10 and Slow Group Interval = 10 to match.
+        [SerializeField] EnvParams env = new EnvParams();
+        [SerializeField] GrowthParams growth = new GrowthParams();
+
+        // Tiers, DNA and the latest planet stats live here. PlantPlacer and the evolution menu read it.
+        public PlantModel Model { get; private set; }
+
         void Start()
         {
             var grid = new WorldGrid(width, height, seed: 12345);
 
-            // Height must be loaded before any system reads it - WaterSystem reads
-            // "height" from its very first tick to know where water should pool.
             string heightmapPath = Path.Combine(Application.streamingAssetsPath, heightmapFileName);
             HeightmapLoader.Apply(grid, heightmapPath, minHeight, maxHeight);
 
-            // DEBUG ONLY - gives every cell a random starting temperature for testing
-            float[] temperature = grid.GetField("temperature", defaultValue: 20f);
-            for (int i = 0; i < temperature.Length; i++)
-                temperature[i] = 10f + (float)grid.Rng.NextDouble() * 20f; // 10-30 range
+            // Creates and fills every field the plant model uses (temperature starts at its bare-ground equilibrium).
+            Model = new PlantModel(env, growth);
+            Model.InitGrid(grid);
 
             var tickEngine = GetComponent<TickEngine>();
             tickEngine.Init(grid);
 
-            // World clock - counts 1 in-game second every 8 ticks
-            var clock = GetComponent<WorldClock>();
-            if (clock == null) clock = gameObject.AddComponent<WorldClock>();
-            tickEngine.AddSystem(clock);
-
             // every tick, order matters
-            tickEngine.AddSystem(new WaterSystem());
-            tickEngine.AddSystem(new TemperatureSystem());
+            tickEngine.AddSystem(new ThermalSystem(Model));
+            tickEngine.AddSystem(new MoistureSystem(Model));
+            tickEngine.AddSystem(new CarbonMixingSystem(Model));
 
-            // slow tick only runs every 3rd tick (set on the TickEngine component)
-            tickEngine.AddSlowSystem(new PlantGrowthSystem());
+            // slow tick: decides who lives, order matters
+            tickEngine.AddSlowSystem(new SuitabilitySystem(Model));
+            tickEngine.AddSlowSystem(new GrowthSystem(Model));
+            tickEngine.AddSlowSystem(new SpreadSystem(Model));
+            tickEngine.AddSlowSystem(new AlbedoSystem(Model));
+            tickEngine.AddSlowSystem(new AggregateSystem(Model));
 
             // Redraw both views every tick.
             tickEngine.OnTick += () =>
