@@ -25,10 +25,11 @@ namespace WorldSim
             string heightmapPath = Path.Combine(Application.streamingAssetsPath, heightmapFileName);
             HeightmapLoader.Apply(grid, heightmapPath, minHeight, maxHeight);
 
-            // DEBUG ONLY - gives every cell a random starting temperature for testing
-            float[] temperature = grid.GetField("temperature", defaultValue: 20f);
-            for (int i = 0; i < temperature.Length; i++)
-                temperature[i] = 10f + (float)grid.Rng.NextDouble() * 20f; // 10-30 range
+            // Start with stable climate fields; the simulation evolves them each tick.
+            grid.GetField("temperature", defaultValue: 15f);
+            grid.GetField("humidity", defaultValue: 0.55f);
+            grid.GetField("soilMoisture", defaultValue: 25f);
+            grid.GetField("precipitation");
 
             var tickEngine = GetComponent<TickEngine>();
             tickEngine.Init(grid);
@@ -41,6 +42,7 @@ namespace WorldSim
             // every tick, order matters
             tickEngine.AddSystem(new WaterSystem());
             tickEngine.AddSystem(new TemperatureSystem());
+            tickEngine.AddSystem(new HumiditySystem());
 
             // slow tick only runs every 3rd tick (set on the TickEngine component)
             tickEngine.AddSlowSystem(new PlantGrowthSystem());
@@ -48,8 +50,8 @@ namespace WorldSim
             // Redraw both views every tick.
             tickEngine.OnTick += () =>
             {
-                renderer.Draw(grid);
-                heightRenderer.Draw(grid);
+                if (renderer != null) renderer.Draw(grid);
+                if (heightRenderer != null) heightRenderer.Draw(grid);
             };
         }
     }
