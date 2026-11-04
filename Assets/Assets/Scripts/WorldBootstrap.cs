@@ -51,6 +51,7 @@ namespace WorldSim
             tickEngine.AddSlowSystem(new SpreadSystem(Model));
             tickEngine.AddSlowSystem(new AlbedoSystem(Model));
             tickEngine.AddSlowSystem(new AggregateSystem(Model));
+            StatDisplayManager.SetModel(Model);
 
             // Redraw both views every tick.
             tickEngine.OnTick += () =>

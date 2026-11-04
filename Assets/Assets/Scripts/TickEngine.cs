@@ -63,5 +63,17 @@ namespace WorldSim
             TickNumber++;
             OnTick?.Invoke();
         }
+        public void TogglePaused()
+        {
+            this.Paused = !this.Paused;
+        }
+        public void SetTickRate(float tr)
+        {
+            this.ticksPerSecond = tr;
+        }
+        public float GetTickRate()
+        {
+            return this.ticksPerSecond;
+        }
     }
 }
