@@ -1,3 +1,4 @@
+using TMPro;
 using System.IO;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ namespace WorldSim
     [RequireComponent(typeof(TickEngine))]
     public class WorldBootstrap : MonoBehaviour
     {
+        public TMP_Text clockTextGO;
         [SerializeField] int width = 245;
         [SerializeField] int height = 245;
         [SerializeField] GridTilemapRenderer renderer;        // discrete tiles, e.g. plant growth
@@ -17,8 +19,6 @@ namespace WorldSim
         [SerializeField] float maxHeight = 100f; // height for pure white
 
         [Header("Plant model (Tellus Growth Model)")]
-        // The doc's rates assume 10 fast ticks per second and a slow tick every 10th fast tick.
-        // Set the TickEngine to Ticks Per Second = 10 and Slow Group Interval = 10 to match.
         [SerializeField] EnvParams env = new EnvParams();
         [SerializeField] GrowthParams growth = new GrowthParams();
 
@@ -51,6 +51,7 @@ namespace WorldSim
             tickEngine.AddSlowSystem(new SpreadSystem(Model));
             tickEngine.AddSlowSystem(new AlbedoSystem(Model));
             tickEngine.AddSlowSystem(new AggregateSystem(Model));
+            tickEngine.AddSlowSystem(new WorldClock(Model));
             StatDisplayManager.SetModel(Model);
 
             // Redraw both views every tick.

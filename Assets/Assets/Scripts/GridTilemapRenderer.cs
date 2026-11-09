@@ -12,10 +12,32 @@ namespace WorldSim
         [SerializeField] TileBase[] tileSet;   // index 0 = lowest value, last = highest
         [SerializeField] float minValue = 0f;
         [SerializeField] float maxValue = 1f;
+        WorldGrid lastGrid;
+        public string FieldName => fieldName;
+        public float MinValue => minValue;
+        public float MaxValue => maxValue;
         int[] lastTileIndex; // previously drawn tile indices
+        int[] lastDrawnValue;
 
+        public void SetField(string newFieldName, float newMin, float newMax)
+        {
+            fieldName = newFieldName;
+            minValue = newMin;
+            maxValue = newMax;
+
+            // Mark every drawn cell as stale (-2) so they are replaced
+            // -1 means that cell was never drawn, meaning a cell must be placed
+            if (lastDrawnValue != null)
+            {
+                for (int i = 0; i < lastDrawnValue.Length; i++)
+                    if (lastDrawnValue[i] != -1) lastDrawnValue[i] = -2;
+            }
+
+            if (lastGrid != null) Draw(lastGrid);
+        }
         public void Draw(WorldGrid grid) // public method to update and draw the tilemap using world grid data
         {
+            lastGrid = grid;
             float[] values = grid.GetField(fieldName);
 
             if (lastTileIndex == null)
