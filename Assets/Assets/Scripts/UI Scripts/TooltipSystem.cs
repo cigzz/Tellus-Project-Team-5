@@ -89,18 +89,43 @@ public class TooltipSystem : MonoBehaviour
     // Checks for canvases in the scene
     void Start()
     {
-        Canvas found = FindFirstObjectByType<Canvas>();
-        if (found == null)
-        {
-            enabled = false;
-            return;
-        }
+        canvas = FindUICanvas();
+            if (canvas == null)
+            {
+                // If scene has no UI skip
+                enabled = false;
+                return;
+            }
 
-        // Grabs canvas  size and position
-        canvas = found.rootCanvas;
         canvasRect = canvas.GetComponent<RectTransform>();
 
         EnsureEventSystem();
+
+        // Pick the canvas with the most entries or the one on top so tooltips are displayed dynamically
+        Canvas FindUICanvas()
+        {
+            var names = new System.Collections.Generic.HashSet<string>();
+            foreach (Entry e in Entries) names.Add(e.objectName);
+
+            Canvas best = null;
+            int bestScore = -1;
+            foreach (Canvas c in FindObjectsByType<Canvas>(FindObjectsSortMode.None))
+            {
+                if (!c.isRootCanvas) continue; // Skip nested canvases like the evolution menu's
+
+                int score = 0;
+                foreach (Transform t in c.GetComponentsInChildren<Transform>(true))
+                    if (names.Contains(t.name)) score++;
+
+                if (score > bestScore ||
+                    (score == bestScore && best != null && c.sortingOrder > best.sortingOrder))
+                {
+                    best = c;
+                    bestScore = score;
+                }
+            }
+            return best;
+        }
 
         // Hover detection for name dobjects and builds panel for tooltip
         if (canvas.renderMode != RenderMode.ScreenSpaceOverlay && canvas.worldCamera == null)
@@ -149,10 +174,12 @@ public class TooltipSystem : MonoBehaviour
             found.Add(t.name);
         }
 
-        // Name in the table matched nothing :(
-        foreach (Entry e in Entries)
-            if (!found.Contains(e.objectName))
-                Debug.LogWarning($"[Tooltips] No UI object named '{e.objectName}' found.");
+        // Only warns if there is one tooltip target or more
+        if (found.Count > 0)
+            foreach (Entry e in Entries)
+                if (!found.Contains(e.objectName))
+                    Debug.LogWarning($"[Tooltips] No UI object named '{e.objectName}' found");
+                
     }
 
     // Tooltip box formatting
@@ -165,6 +192,11 @@ public class TooltipSystem : MonoBehaviour
         panel = (RectTransform)go.transform;
         panel.anchorMin = panel.anchorMax = new Vector2(0.5f, 0.5f);
         panel.pivot = new Vector2(0f, 1f);
+
+        // Draw it over the tilemap
+        var overrideCanvas = go.AddComponent<Canvas>();
+        overrideCanvas.overrideSorting = true;
+        overrideCanvas.sortingOrder = 1000;
 
         // Transparent and uninteractable
         group = go.GetComponent<CanvasGroup>();
