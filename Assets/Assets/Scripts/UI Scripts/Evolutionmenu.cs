@@ -26,7 +26,7 @@ public class EvolutionMenu : MonoBehaviour
         "More growth and DNA, but uses more water.",
         "Cools tiles, but loses water. Raise if hot.",
         "Cools the ground, dims light. Raise if hot.",
-        "Spreads faster, grows 6% slower per tier.",
+        "Spreads faster, but each tier slows growth.",
     };
 
     GameObject root; // overlay + panel together; toggled on and off

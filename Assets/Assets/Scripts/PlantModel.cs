@@ -54,6 +54,27 @@ namespace WorldSim
         public float PressureDecay = 0.9f;  // seed pressure kept each slow tick
         public float MinSeedSuit = 0.15f;   // tiles below this suitability collect no seed pressure
         public float Beta = 0.3f;           // smoothing for temperature and light before suitability reads them
+
+        [Header("Evolution strength")]
+        // How hard the tiers hit. 1 = the doc's tier table exactly. Higher stretches every tier's effect away from
+        // tier 2 (the default), so upgrades and downgrades matter more. Above ~1.75, spread tier 0 can stall a colony.
+        public float TraitStrength = 1.5f;
+
+        [Header("Spread steering (toward more suitable land)")]
+        // Multiplies Kappa. Steering makes the front reluctant to push into worse land, which slows it down;
+        // this brings the overall pace back up. Kept separate from Kappa so existing scenes pick it up automatically.
+        public float SpreadScale = 1.5f;
+        // 0 = spread equally in every direction. Higher = favour the direction in which suitability improves.
+        public float SteeringStrength = 1.0f;
+        // Seed pressure from a neighbour is scaled by a weight kept between these. Raising the floor lets the plant
+        // still push into worse land (keeps the coverage ceiling up); lowering it makes the plant pickier.
+        public float SteeringFloor = 0.6f;
+        public float SteeringCeiling = 2.0f;
+        // Suitability is averaged over this many tiles around each tile (a radius) before the direction is read, so a
+        // gentle trend across several tiles can be sensed instead of only the tile-to-tile difference.
+        public int SteeringRadius = 3;
+        // Gradients smaller than this (suitability per tile) count as "flat" and give no preferred direction.
+        public float SteeringFlatBelow = 0.002f;
     }
 
     public enum PlantAttribute { Canopy = 0, Transpiration = 1, Pigmentation = 2, Spread = 3 }
@@ -140,7 +161,10 @@ namespace WorldSim
             return true;
         }
 
-        public PlantTraits BuildTraits()
+        // strength = 1 reproduces the doc's tier table. Above 1, each tier's value is pushed further from the tier-2
+        // value: multiplied traits use a power law around tier 2 (so they stay positive), and pigmentation, which only
+        // enters the albedo formula as (pigmentation - p_ref), has its distance from tier 2 scaled.
+        public PlantTraits BuildTraits(float strength = 1f)
         {
             int c = Tiers[(int)PlantAttribute.Canopy];
             int t = Tiers[(int)PlantAttribute.Transpiration];
@@ -148,13 +172,21 @@ namespace WorldSim
             int s = Tiers[(int)PlantAttribute.Spread];
             return new PlantTraits
             {
-                Canopy = TierTable.Canopy[c],
-                Transpiration = TierTable.Transpiration[t],
-                Pigmentation = TierTable.Pigmentation[p],
-                Spread = TierTable.Spread[s],
-                GrowthMult = TierTable.GrowthFromCanopy[c] * TierTable.GrowthFromSpread[s],
+                Canopy = Stretch(TierTable.Canopy, c, strength),
+                Transpiration = Stretch(TierTable.Transpiration, t, strength),
+                Pigmentation = TierTable.Pigmentation[TierTable.DefaultTier]
+                             + strength * (TierTable.Pigmentation[p] - TierTable.Pigmentation[TierTable.DefaultTier]),
+                Spread = Stretch(TierTable.Spread, s, strength),
+                GrowthMult = Stretch(TierTable.GrowthFromCanopy, c, strength) * Stretch(TierTable.GrowthFromSpread, s, strength),
                 PigmentTier = p,
             };
+        }
+
+        // table[2] * (table[tier] / table[2]) ^ strength. Tier 2 is unchanged at any strength.
+        static float Stretch(float[] table, int tier, float strength)
+        {
+            float baseline = table[TierTable.DefaultTier];
+            return baseline * Mathf.Pow(table[tier] / baseline, strength);
         }
     }
 
@@ -167,12 +199,31 @@ namespace WorldSim
         public readonly EvolutionModel Evolution = new EvolutionModel();
         public PlantStats Stats;
 
-        public PlantTraits Traits => Evolution.BuildTraits();
+        // Cached: systems read this every tick (CanGrowAt even reads it per tile), and building it uses Pow.
+        // Rebuilt when a tier changes or TraitStrength is edited in the Inspector.
+        PlantTraits traits;
+        bool traitsDirty = true;
+        float traitsBuiltWithStrength;
+
+        public PlantTraits Traits
+        {
+            get
+            {
+                if (traitsDirty || traitsBuiltWithStrength != Growth.TraitStrength)
+                {
+                    traits = Evolution.BuildTraits(Growth.TraitStrength);
+                    traitsBuiltWithStrength = Growth.TraitStrength;
+                    traitsDirty = false;
+                }
+                return traits;
+            }
+        }
 
         public PlantModel(EnvParams env, GrowthParams growth)
         {
             Env = env;
             Growth = growth;
+            Evolution.Changed += () => traitsDirty = true;
         }
 
         // The tilemap renderer shows "plantGrowth" as 0-8 (0 = empty, 1-8 = Plant1..Plant8 sprites).

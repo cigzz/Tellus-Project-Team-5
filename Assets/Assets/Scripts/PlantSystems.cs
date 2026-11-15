@@ -102,10 +102,10 @@ namespace WorldSim
         {
             this.model = model;
             //                                     lo     optLo  optHi  hi     weight
-            lutT = new WeightedLogLut(new FactorCurve(0f,    15f,   28f,   40f,   0.30f), -40f, 80f);        // temperature, deg C
+            lutT = new WeightedLogLut(new FactorCurve(0f, 15f, 28f, 40f, 0.30f), -40f, 80f);        // temperature, deg C
             lutW = new WeightedLogLut(new FactorCurve(0.05f, 0.30f, 0.80f, 1.00f, 0.30f), 0f, 1f);           // water
             lutL = new WeightedLogLut(new FactorCurve(0.10f, 0.40f, 0.90f, 1.00f, 0.20f), 0f, 1f);           // light = S0 * (1 - albedo)
-            lutC = new WeightedLogLut(new FactorCurve(150f,  300f,  1200f, 5000f, 0.10f), 0f, 6000f, 512);   // CO2, ppm
+            lutC = new WeightedLogLut(new FactorCurve(150f, 300f, 1200f, 5000f, 0.10f), 0f, 6000f, 512);   // CO2, ppm
             lutH = new WeightedLogLut(new FactorCurve(0.02f, 0.10f, 0.60f, 1.00f, 0.10f), 0f, 1f);           // humidity
         }
 
@@ -177,15 +177,20 @@ namespace WorldSim
     }
 
     // Empty tiles collect seed pressure from their 4 edge neighbours; at pressure 1 they are seeded.
-    //   gain = sigma * kappa * s * (mean neighbour biomass)   if B = 0 and s >= 0.15
+    //   gain = sigma * kappa * spread scale * s * (steered mean neighbour biomass) * variation   if the tile is viable
     //   P = 0.9 * P + gain;   if P >= 1 then B = B_seed, P = 0
     // An accumulator instead of a random roll keeps runs repeatable. Two passes (collect, then apply) so
     // tile order can't bias which way the plant spreads.
-
+    //
+    // Steering: suitability is averaged over a few tiles around each tile ("habitat"). The direction in which that
+    // average improves is the preferred direction, and seed pressure travelling that way is weighted up (to the
+    // ceiling) while seed pressure travelling toward worse land is weighted down (to the floor). Where suitability is
+    // flat there is no preferred direction and spread is the same in every direction.
     public class SpreadSystem : ITickSystem
     {
         readonly PlantModel model;
         readonly List<int> toSeed = new List<int>();
+        float[] habitat, blurTemp; // smoothed suitability, allocated on first use
 
         // Fixed seed makes the same world produce the same spread pattern.
         const uint RandomSeed = 1234567u;
@@ -210,14 +215,53 @@ namespace WorldSim
             }
         }
 
+        // Average of suitability over a (2r+1) x (2r+1) window, done as two 1D passes.
+        // x wraps around the planet and y clamps at the poles, like the neighbour tables.
+        void BlurSuitability(WorldGrid g, float[] S, int radius)
+        {
+            if (habitat == null || habitat.Length != g.CellCount)
+            {
+                habitat = new float[g.CellCount];
+                blurTemp = new float[g.CellCount];
+            }
+
+            int w = g.Width, h = g.Height;
+            float inv = 1f / (2 * radius + 1);
+
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    float sum = 0f;
+                    for (int d = -radius; d <= radius; d++)
+                        sum += S[g.Index(((x + d) % w + w) % w, y)];
+                    blurTemp[g.Index(x, y)] = sum * inv;
+                }
+            }
+
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    float sum = 0f;
+                    for (int d = -radius; d <= radius; d++)
+                        sum += blurTemp[g.Index(x, Mathf.Clamp(y + d, 0, h - 1))];
+                    habitat[g.Index(x, y)] = sum * inv;
+                }
+            }
+        }
+
         public void Tick(WorldGrid g, int tickNumber)
         {
             GrowthParams p = model.Growth;
-            float sigmaKappa = model.Traits.Spread * p.Kappa;
+            float sigmaKappa = model.Traits.Spread * p.Kappa * p.SpreadScale;
 
             float[] B = g.GetField("biomass");
             float[] S = g.GetField("suitability");
             float[] P = g.GetField("pressure");
+
+            bool steer = p.SteeringStrength > 0f;
+            if (steer) BlurSuitability(g, S, Mathf.Max(1, p.SteeringRadius));
 
             toSeed.Clear();
 
@@ -255,8 +299,29 @@ namespace WorldSim
                         continue;
                     }
 
-                    // More nearby vegetation means more seed pressure.
-                    float localSource = neighborSum * 0.25f;
+                    float localSource;
+                    if (steer)
+                    {
+                        // (gx, gy) points toward better land. Dividing by (length + flat threshold) gives a direction whose
+                        // size is ~0 on flat ground and ~1 on a clear slope.
+                        float gx = (habitat[g.Right(x, y)] - habitat[g.Left(x, y)]) * 0.5f;
+                        float gy = (habitat[g.Up(x, y)] - habitat[g.Down(x, y)]) * 0.5f;
+                        float inv = 1f / (Mathf.Sqrt(gx * gx + gy * gy) + p.SteeringFlatBelow);
+                        float ux = gx * inv, uy = gy * inv;
+
+                        float k = p.SteeringStrength, lo = p.SteeringFloor, hi = p.SteeringCeiling;
+
+                        // The left neighbour sends seed rightward, so it is weighted up when better land lies to the right (ux > 0), etc.
+                        localSource = (left * Mathf.Clamp(1f + k * ux, lo, hi)
+                                     + right * Mathf.Clamp(1f - k * ux, lo, hi)
+                                     + up * Mathf.Clamp(1f - k * uy, lo, hi)
+                                     + down * Mathf.Clamp(1f + k * uy, lo, hi)) * 0.25f;
+                    }
+                    else
+                    {
+                        // More nearby vegetation means more seed pressure.
+                        localSource = neighborSum * 0.25f;
+                    }
 
                     // Small deterministic variation creates an irregular frontier.
                     float variation = 0.75f + 0.5f * Hash01(i, tickNumber);
