@@ -9,28 +9,39 @@ namespace WorldSim
     {
         [SerializeField] Tilemap tilemap;
         [SerializeField] string fieldName = "temperature";
-        [SerializeField] TileBase[] tileSet;   // index 0 = lowest value, last = highest
+        [SerializeField] TileBase[] tileSet;
         [SerializeField] float minValue = 0f;
         [SerializeField] float maxValue = 1f;
+        [SerializeField] bool useOptimal;           // off: linear color from min - max. on: best at optimalValue, worse toward min and max
+        [SerializeField] float optimalValue = 0.5f;
+        [SerializeField] float optimalTolerance = 0f;   // half-width of the all-green band around optimalValue
         WorldGrid lastGrid;
         public string FieldName => fieldName;
         public float MinValue => minValue;
         public float MaxValue => maxValue;
+        public TileBase[] TileSet => tileSet;
+        public bool UseOptimal => useOptimal;
+        public float OptimalValue => optimalValue;
+        public float OptimalTolerance => optimalTolerance;
         int[] lastTileIndex; // previously drawn tile indices
         int[] lastDrawnValue;
 
-        public void SetField(string newFieldName, float newMin, float newMax)
+        public void SetField(string newFieldName, float newMin, float newMax, TileBase[] newTileSet = null,
+                             bool newUseOptimal = false, float newOptimalValue = 0f, float newOptimalTolerance = 0f)
         {
             fieldName = newFieldName;
             minValue = newMin;
             maxValue = newMax;
+            useOptimal = newUseOptimal;
+            optimalValue = newOptimalValue;
+            optimalTolerance = newOptimalTolerance;
+            if (newTileSet != null && newTileSet.Length > 0) tileSet = newTileSet; // empty = keep the current tileset
 
-            // Mark every drawn cell as stale (-2) so they are replaced
-            // -1 means that cell was never drawn, meaning a cell must be placed
-            if (lastDrawnValue != null)
+            // forget what was drawn so every cell repaints with the new field and tileset
+            if (lastTileIndex != null)
             {
-                for (int i = 0; i < lastDrawnValue.Length; i++)
-                    if (lastDrawnValue[i] != -1) lastDrawnValue[i] = -2;
+                for (int i = 0; i < lastTileIndex.Length; i++)
+                    lastTileIndex[i] = -1;
             }
 
             if (lastGrid != null) Draw(lastGrid);
@@ -61,10 +72,21 @@ namespace WorldSim
                 }
             }
         }
+        float Normalize(float value)
+        {
+            if (!useOptimal) return Mathf.InverseLerp(minValue, maxValue, value);
+
+            float lowEdge = optimalValue - optimalTolerance;
+            float highEdge = optimalValue + optimalTolerance;
+
+            if (value < lowEdge) return Mathf.InverseLerp(lowEdge, minValue, value);
+            if (value > highEdge) return Mathf.InverseLerp(highEdge, maxValue, value);
+            return 0.001f; // inside the tolerance band
+        }
 
         int ValueToTileIndex(float value) // method to convert values into a tile in the tile index in the inspector
         {
-            float t = Mathf.InverseLerp(minValue, maxValue, value); // normalize values bewteen the set points
+            float t = Normalize(value);
             int index = Mathf.FloorToInt(t * (tileSet.Length - 1)); // scales the value to match the given tiles indexes
             return Mathf.Clamp(index, 0, tileSet.Length - 1); // clamps the final index to stay in bounds
         }

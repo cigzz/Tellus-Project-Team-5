@@ -6,8 +6,8 @@ public class WorldClock : MonoBehaviour, ITickSystem
 {
     readonly PlantModel model;
     public TickEngine tickEngine;
-    public TMP_Text worldClockTMP;
-    public string worldClockParentGOName = "WorldClock";
+    TMP_Text worldClockTMP;
+    string worldClockParentGOName = "WorldClock";
     public float referenceTicksPerSecondValue;
     float ticksPerSecond;
     int tickCounter;
