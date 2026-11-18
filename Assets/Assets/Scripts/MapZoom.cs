@@ -51,8 +51,8 @@ public class MapZoom : MonoBehaviour
             ZoomAroundPoint(heightMap.transform, mousePosition, zoomRatio);
         }
  
-        // When left mouse is held and it is on the world grid, move both maps with mouse position
-    if (Mouse.current.leftButton.isPressed && MouseOverMap(mousePosition))
+        // When right mouse is held and it is on the world grid, move both maps with mouse position
+    if (Mouse.current.rightButton.isPressed && MouseOverMap(mousePosition))
         {
             // Where the mouse was last frame (current spot minus how far it moved)
             UnityEngine.Vector3 lastMousePosition = ScreenToWorld(mouseScreen - Mouse.current.delta.ReadValue());

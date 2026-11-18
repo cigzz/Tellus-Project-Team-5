@@ -10,6 +10,7 @@ namespace WorldSim
     public enum TileInspectorMode { Standard, Debug } // defines inspection modes, debug shows all field data and standard has a defined list for the player
     public class TileInspector : MonoBehaviour
     {
+        public KeyCode DebugToggleKey = KeyCode.P; // key that switches between Standard and Debug mode
         [Header("Timing")] // inspector heading
         public float HoverDelay = 1.5f;       // seconds of hovering before the tooltip appears
         public float RefreshInterval = 0.25f; // how often shown data is re-read while hovering
@@ -29,8 +30,16 @@ namespace WorldSim
         bool tooltipVisible;
         float hoverTimer; // hover delay interval
         float refreshTimer; // data refresh interval
+
         void Update()
         {
+            // toggle between Standard and Debug mode when the shortcut key is pressed
+            if (Input.GetKeyDown(DebugToggleKey))
+            {
+                Mode = Mode == TileInspectorMode.Standard ? TileInspectorMode.Debug : TileInspectorMode.Standard;
+                refreshTimer = RefreshInterval; // makes an open tooltip update right away with the new mode
+            }
+
             if (tickEngine.Grid == null) return;
 
             Vector2Int? cellUnderMouse = GetCellUnderMouse();

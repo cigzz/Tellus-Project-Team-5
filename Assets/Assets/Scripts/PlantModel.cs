@@ -251,7 +251,9 @@ namespace WorldSim
             {
                 // latitude runs from -90 (bottom row) to +90 (top row); insolation = cos(latitude)
                 float lat = ((y + 0.5f) / grid.Height) * Mathf.PI - Mathf.PI / 2f;
-                float insolation = Mathf.Cos(lat);
+                // PoleSun = sunlight at the poles (0 = none, 1 = same as equator)
+                const float PoleSun = 0.2f;
+                float insolation = Mathf.Lerp(PoleSun, 1f, Mathf.Cos(lat));
                 for (int x = 0; x < grid.Width; x++)
                 {
                     int i = grid.Index(x, y);
