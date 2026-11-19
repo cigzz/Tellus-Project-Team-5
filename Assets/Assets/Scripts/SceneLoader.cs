@@ -4,15 +4,18 @@ using UnityEngine.SceneManagement;
 //scene loading script for UI button actions
 public class SceneLoader : MonoBehaviour
 {
-    public void Scene(string sceneName)
+    public void LoadScene(string sceneName)
     {
-        if (Application.CanStreamedLevelBeLoaded(sceneName))
-        {
-            SceneManager.LoadScene(sceneName);
-        }
-        else
-        {
-            Debug.LogError($"Scene '{sceneName}' could not be loaded, check build settings.");
-        }
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void LoadSceneByIndex(int buildIndex)
+    {
+        SceneManager.LoadScene(buildIndex);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
