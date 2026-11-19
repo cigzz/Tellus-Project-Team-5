@@ -22,6 +22,12 @@ namespace WorldSim
         [SerializeField] EnvParams env = new EnvParams();
         [SerializeField] GrowthParams growth = new GrowthParams();
 
+        [Header("Water cycle")]
+        [SerializeField] WaterParams water = new WaterParams();
+
+        [Header("Albedo")]
+        [SerializeField] AlbedoParams albedo = new AlbedoParams();
+
         // Tiers, DNA and the latest planet stats live here. PlantPlacer and the evolution menu read it.
         public PlantModel Model { get; private set; }
 
@@ -32,6 +38,10 @@ namespace WorldSim
             string heightmapPath = Path.Combine(Application.streamingAssetsPath, heightmapFileName);
             HeightmapLoader.Apply(grid, heightmapPath, minHeight, maxHeight);
 
+            // Terrain albedo first: InitGrid keeps an existing "albedo" field, so starting temperatures
+            // are computed from the height-based albedo instead of a flat A0.
+            TerrainAlbedoSystem.Initialize(grid, albedo, env.AMax);
+
             // Creates and fills every field the plant model uses (temperature starts at its bare-ground equilibrium).
             Model = new PlantModel(env, growth);
             Model.InitGrid(grid);
@@ -41,7 +51,7 @@ namespace WorldSim
 
             // every tick, order matters
             tickEngine.AddSystem(new TemperatureSystem(Model));
-            tickEngine.AddSystem(new WaterSystem(Model));
+            tickEngine.AddSystem(new WaterSystem(Model, water));
             tickEngine.AddSystem(new HumiditySystem(Model));
             tickEngine.AddSystem(new CarbonMixingSystem(Model));
 
@@ -49,7 +59,7 @@ namespace WorldSim
             tickEngine.AddSlowSystem(new SuitabilitySystem(Model));
             tickEngine.AddSlowSystem(new GrowthSystem(Model));
             tickEngine.AddSlowSystem(new SpreadSystem(Model));
-            tickEngine.AddSlowSystem(new AlbedoSystem(Model));
+            tickEngine.AddSlowSystem(new TerrainAlbedoSystem(Model, albedo));
             tickEngine.AddSlowSystem(new AggregateSystem(Model));
             tickEngine.AddSlowSystem(new WorldClock(Model));
             StatDisplayManager.SetModel(Model);
