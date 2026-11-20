@@ -12,7 +12,7 @@ using WorldSim;
 // Click the Close button, click the dimmed background, or press Esc to close it.
 public class EvolutionMenu : MonoBehaviour
 {
-    const string ButtonName = "Evolution"; // exact name of the button on the canvas
+    const string ButtonName = "Evolution"; // name of the button or its wrapper on the canvas
 
     [SerializeField] Vector2 panelSize = new Vector2(900f, 680f);
     [SerializeField] float padding = 32f;
@@ -74,6 +74,12 @@ public class EvolutionMenu : MonoBehaviour
     {
         BuildMenu(canvas);
         openButton.onClick.AddListener(Toggle);
+
+        // Dynamic_UI has a child Button that receives clicks before the parent.
+        // Dynamic_UI_V2 uses the parent button directly.
+        Transform child = openButton.transform.Find("Button");
+        if (child != null && child.TryGetComponent(out Button childButton))
+            childButton.onClick.AddListener(Toggle);
     }
 
     public void Toggle()

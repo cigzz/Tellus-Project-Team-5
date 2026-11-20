@@ -1,6 +1,9 @@
 using TMPro;
 using System.IO;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEngine.InputSystem;
+#endif
 
 namespace WorldSim
 {
@@ -27,6 +30,10 @@ namespace WorldSim
 
         [Header("Albedo")]
         [SerializeField] AlbedoParams albedo = new AlbedoParams();
+
+        [Header("Coverage victory")]
+            [SerializeField, Range(0f, 1f)] float victoryMinCoverage = 0.4f;
+        EndGameSystem endGameSystem;
 
         // Tiers, DNA and the latest planet stats live here. PlantPlacer and the evolution menu read it.
         public PlantModel Model { get; private set; }
@@ -64,6 +71,10 @@ namespace WorldSim
             tickEngine.AddSlowSystem(new WorldClock(Model));
             StatDisplayManager.SetModel(Model);
 
+            // Check coverage
+            endGameSystem = new EndGameSystem(Model, tickEngine, victoryMinCoverage);
+            tickEngine.AddSlowSystem(endGameSystem);
+
             // Redraw both views every tick.
             tickEngine.OnTick += () =>
             {
@@ -71,5 +82,33 @@ namespace WorldSim
                 if (heightRenderer != null) heightRenderer.Draw(grid);
             };
         }
+    
+//PRESS F9 TO WIN OR F10 TO LOSE OR IN GAMEMANAGER MENU
+#if UNITY_EDITOR
+        void Update()
+        {
+            var keyboard = Keyboard.current;
+            if (keyboard == null) return;
+            if (keyboard.f9Key.wasPressedThisFrame) PreviewVictory();
+            if (keyboard.f10Key.wasPressedThisFrame) PreviewExtinction();
+        }
+
+        [ContextMenu("Preview Victory (Play Mode)")]
+        void PreviewVictory() => PreviewEnding(true);
+
+        [ContextMenu("Preview Extinction (Play Mode)")]
+        void PreviewExtinction() => PreviewEnding(false);
+
+        void PreviewEnding(bool won)
+        {
+            if (!Application.isPlaying || endGameSystem == null)
+            {
+                Debug.LogWarning("Enter Play mode and let GameManager initialize before previewing an ending.", this);
+                return;
+            }
+
+            endGameSystem.PreviewEnding(won);
+        }
+#endif
     }
 }

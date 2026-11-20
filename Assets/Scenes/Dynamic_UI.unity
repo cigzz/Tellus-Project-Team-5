@@ -1357,6 +1357,46 @@ MonoBehaviour:
     SteeringCeiling: 2
     SteeringRadius: 3
     SteeringFlatBelow: 0.002
+  water:
+    Difficulty: 1
+    CapacityAt15C: 0.45
+    CapacityGrowth: 0.06
+    CapacityMin: 0.04
+    CapacityMax: 1
+    LapseRate: 10
+    EvapGrowth: 0.05
+    EvapMaxBoost: 4
+    FrozenEvapFactor: 0.15
+    Sublimation: 1
+    OverflowRain: 0.35
+    FreezeRate: 0.04
+    MeltRate: 0.05
+    RunoffRate: 0.2
+    WaterDepthScale: 4
+    MaxRunoffShare: 0.5
+    SoilRetention: 0.3
+    Infiltration: 0.004
+    SpringRate: 0.01
+    GroundwaterDiffusion: 0.1
+    StartGroundwater: 0.4
+    VapourGreenhouse: 3
+    VapourReference: 0.1
+    LatentHeat: 6
+    DroughtAmplitude: 0.35
+    DroughtPeriodTicks: 1200
+  albedo:
+    LowlandAlbedo: 0.14
+    HighlandAlbedo: 0.4
+    HeightCurve: 1.2
+    WaterAlbedo: 0.06
+    WetFrom: 0.4
+    WetFull: 1.5
+    MaxWaterCover: 0.8
+    IceAlbedo: 0.55
+    IceFull: 1.5
+    CanopyHidesSnow: 0.5
+    MinAlbedo: 0.04
+  victoryMinCoverage: 0.25
 --- !u!114 &168468599
 MonoBehaviour:
   m_ObjectHideFlags: 0

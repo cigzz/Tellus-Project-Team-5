@@ -3,7 +3,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using WorldSim;
 
 public class TooltipSystem : MonoBehaviour
 {
@@ -35,19 +37,24 @@ public class TooltipSystem : MonoBehaviour
             "Hover over a tile to see its conditions. Every spot on the planet is different, so check where your plants are struggling."),
         new Entry("TileInspectIcon", "Tile Inspector",
             "Hover over a tile to see its conditions. Every spot on the planet is different, so check where your plants are struggling."),
-        new Entry("Filters", "Map Filters",
-            "Switch the map view to see temperature, water, or other conditions. Use them to spot problems before your plants do."),
-        new Entry("Tick Controls", "Tick Speed",
-            "Controls how fast time passes. Slow down to watch what is changing, speed up to see long-term results."),
+        new Entry("Show/Hide", "Map Filters",
+            "Open or close the map filters."),
+        new Entry("TempFilterButton", "Temperature Filter",
+            "See which tiles are hot or cold. Select again to return to plant coverage."),
+        new Entry("WaterFilterButton", "Water Filter",
+            "See where the ground is wetter or drier. Select again to return to plant coverage."),
+        new Entry("AlbedoFilterButton", "Albedo Filter",
+            "See how much sunlight each tile reflects. Select again to return to plant coverage."),
         new Entry("Tick scroll bar", "Tick Speed",
             "Controls how fast time passes. Slow down to watch what is changing, speed up to see long-term results."),
         new Entry("Evolution", "Evolution",
             "Change your plant's traits using DNA. Different conditions need different traits."),
         new Entry("Options", "Options",
             "Save your game, adjust settings, or exit."),
-        new Entry("Button", "Play / Pause",
-            "Pause or resume time. While paused, the planet stops changing, so it is a good time to think."),    
     };
+
+    static readonly Entry PauseTooltip = new Entry("", "Play / Pause",
+        "Pause or resume time. While paused, the planet stops changing, so it is a good time to think.");
 
     public static TooltipSystem Instance { get; private set; }
 
@@ -67,9 +74,18 @@ public class TooltipSystem : MonoBehaviour
     bool hovering, shown;
     float hoverTime;
 
-    // Applies to a scene automatically
+    // Rebind tooltips when starting or restarting a gameplay scene.
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     static void Bootstrap()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        EnsureInstance();
+    }
+
+    static void OnSceneLoaded(Scene scene, LoadSceneMode mode) => EnsureInstance();
+
+    static void EnsureInstance()
     {
         if (Instance == null)
             new GameObject("TooltipSystem").AddComponent<TooltipSystem>();
@@ -160,26 +176,34 @@ public class TooltipSystem : MonoBehaviour
         var lookup = new System.Collections.Generic.Dictionary<string, Entry>();
         foreach (Entry e in Entries) lookup[e.objectName] = e;
 
-        var found = new System.Collections.Generic.HashSet<string>();
         foreach (Transform t in canvas.GetComponentsInChildren<Transform>(true))
         {
-            // Skips objects that dont have a name in the table
-            if (!lookup.TryGetValue(t.name, out Entry entry)) continue;
-
-            // Reuse existing ones and assigns text
-            TooltipTarget target = t.GetComponent<TooltipTarget>();
-            if (target == null) target = t.gameObject.AddComponent<TooltipTarget>();
-            target.title = entry.title;
-            target.body = entry.body;
-            found.Add(t.name);
+            if (IsPauseButton(t))
+                AttachTarget(t, PauseTooltip);
+            else if (lookup.TryGetValue(t.name, out Entry entry))
+                AttachTarget(t, entry);
         }
+    }
 
-        // Only warns if there is one tooltip target or more
-        if (found.Count > 0)
-            foreach (Entry e in Entries)
-                if (!found.Contains(e.objectName))
-                    Debug.LogWarning($"[Tooltips] No UI object named '{e.objectName}' found");
-                
+    // Several controls share the name "Button". Only the pause control calls TickEngine.TogglePaused.
+    static bool IsPauseButton(Transform t)
+    {
+        if (!t.TryGetComponent(out Button button)) return false;
+        for (int i = 0; i < button.onClick.GetPersistentEventCount(); i++)
+        {
+            if (button.onClick.GetPersistentTarget(i) is TickEngine &&
+                button.onClick.GetPersistentMethodName(i) == nameof(TickEngine.TogglePaused))
+                return true;
+        }
+        return false;
+    }
+
+    static void AttachTarget(Transform t, Entry entry)
+    {
+        if (!t.TryGetComponent(out TooltipTarget target))
+            target = t.gameObject.AddComponent<TooltipTarget>();
+        target.title = entry.title;
+        target.body = entry.body;
     }
 
     // Tooltip box formatting
@@ -231,6 +255,7 @@ public class TooltipSystem : MonoBehaviour
     public void Show(string title, string body)
     {
         if (panel == null) return;
+        group.alpha = 0f;
         pendingTitle = title;
         pendingBody = body;
         hovering = true;

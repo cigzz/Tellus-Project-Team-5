@@ -43,7 +43,7 @@ namespace WorldSim
 
             // Catches up if a frame took longer than one tick
             int safety = 5;
-            while (timer >= tickLength && safety-- > 0)
+            while (!Paused && timer >= tickLength && safety-- > 0)
             {
                 timer -= tickLength;
                 RunOneTick();
