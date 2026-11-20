@@ -632,8 +632,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldSim.WorldBootstrap
   clockTextGO: {fileID: 0}
-  width: 400
-  height: 264
+  width: 256
+  height: 144
   renderer: {fileID: 168468604}
   heightRenderer: {fileID: 1110829557}
   heightmapFileName: heightmap.png
@@ -677,6 +677,45 @@ MonoBehaviour:
     SteeringCeiling: 2
     SteeringRadius: 3
     SteeringFlatBelow: 0.002
+  water:
+    Difficulty: 1
+    CapacityAt15C: 0.45
+    CapacityGrowth: 0.06
+    CapacityMin: 0.04
+    CapacityMax: 1
+    LapseRate: 10
+    EvapGrowth: 0.05
+    EvapMaxBoost: 4
+    FrozenEvapFactor: 0.15
+    Sublimation: 1
+    OverflowRain: 0.35
+    FreezeRate: 0.04
+    MeltRate: 0.05
+    RunoffRate: 0.2
+    WaterDepthScale: 4
+    MaxRunoffShare: 0.5
+    SoilRetention: 0.3
+    Infiltration: 0.004
+    SpringRate: 0.01
+    GroundwaterDiffusion: 0.1
+    StartGroundwater: 0.4
+    VapourGreenhouse: 3
+    VapourReference: 0.1
+    LatentHeat: 6
+    DroughtAmplitude: 0.35
+    DroughtPeriodTicks: 1200
+  albedo:
+    LowlandAlbedo: 0.14
+    HighlandAlbedo: 0.4
+    HeightCurve: 1.2
+    WaterAlbedo: 0.06
+    WetFrom: 0.4
+    WetFull: 1.5
+    MaxWaterCover: 0.8
+    IceAlbedo: 0.55
+    IceFull: 1.5
+    CanopyHidesSnow: 0.5
+    MinAlbedo: 0.04
 --- !u!114 &168468599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8051,17 +8090,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 182133306}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1231742533
 MonoBehaviour:

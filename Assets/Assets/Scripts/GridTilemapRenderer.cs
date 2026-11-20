@@ -25,6 +25,24 @@ namespace WorldSim
         public float OptimalTolerance => optimalTolerance;
         int[] lastTileIndex; // previously drawn tile indices
         int[] lastDrawnValue;
+        readonly System.Collections.Generic.List<Vector3Int> changedPositions = new System.Collections.Generic.List<Vector3Int>();
+        readonly System.Collections.Generic.List<TileBase> changedTiles = new System.Collections.Generic.List<TileBase>();
+
+        // Shows or hides this view. Hidden: stops drawing and hides its tilemap. Shown: repaints every cell.
+        public void SetShown(bool shown)
+        {
+            enabled = shown;
+            var tilemapRenderer = tilemap.GetComponent<TilemapRenderer>();
+            if (tilemapRenderer != null) tilemapRenderer.enabled = shown;
+            if (!shown) return;
+
+            if (lastTileIndex != null)
+            {
+                for (int i = 0; i < lastTileIndex.Length; i++)
+                    lastTileIndex[i] = -1;
+            }
+            if (lastGrid != null) Draw(lastGrid);
+        }
 
         public void SetField(string newFieldName, float newMin, float newMax, TileBase[] newTileSet = null,
                              bool newUseOptimal = false, float newOptimalValue = 0f, float newOptimalTolerance = 0f)
@@ -49,6 +67,7 @@ namespace WorldSim
         public void Draw(WorldGrid grid) // public method to update and draw the tilemap using world grid data
         {
             lastGrid = grid;
+            if (!enabled) return; // hidden view: don't draw
             float[] values = grid.GetField(fieldName);
 
             if (lastTileIndex == null)
@@ -57,6 +76,9 @@ namespace WorldSim
                 for (int i = 0; i < lastTileIndex.Length; i++)
                     lastTileIndex[i] = -1;
             }
+
+            changedPositions.Clear();
+            changedTiles.Clear();
 
             for (int y = 0; y < grid.Height; y++) // loop through the grid
             {
@@ -67,10 +89,15 @@ namespace WorldSim
 
                     if (tileIndex == lastTileIndex[i]) continue; // if unchanged, skip it
 
-                    tilemap.SetTile(new Vector3Int(x, y, 0), tileSet[tileIndex]); // places tile onto the map at given position
+                    changedPositions.Add(new Vector3Int(x, y, 0)); // queue only the cells that changed
+                    changedTiles.Add(tileSet[tileIndex]);
                     lastTileIndex[i] = tileIndex; // updates recorded tile index for the cell position
                 }
             }
+
+            // one batched tilemap update instead of one SetTile call per cell
+            if (changedPositions.Count > 0)
+                tilemap.SetTiles(changedPositions.ToArray(), changedTiles.ToArray());
         }
         float Normalize(float value)
         {

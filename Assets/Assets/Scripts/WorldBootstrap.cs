@@ -15,6 +15,7 @@ namespace WorldSim
         [SerializeField] int height = 245;
         [SerializeField] GridTilemapRenderer renderer;        // discrete tiles, e.g. plant growth
         [SerializeField] GridTextureRenderer heightRenderer;  // continuous grayscale, for height
+        [SerializeField] ColorBlendTilemapRenderer colorRenderer; // blended-color field view
 
         [Header("Heightmap")]
         [SerializeField] string heightmapFileName = "heightmap.png"; // relative to StreamingAssets
@@ -80,6 +81,7 @@ namespace WorldSim
             {
                 if (renderer != null) renderer.Draw(grid);
                 if (heightRenderer != null) heightRenderer.Draw(grid);
+                if (colorRenderer != null) colorRenderer.Draw(grid);
             };
         }
     
