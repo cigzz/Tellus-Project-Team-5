@@ -23,7 +23,7 @@ namespace WorldSim
         public float Ke = 0.02f;      // evaporation
         public float Kt = 0.03f;      // transpiration
         public float Kr = 0.05f;      // rain from humidity
-        public float DW = 0.03f;      // water diffusion
+        public float DW = 0.35f;      // water diffusion
         public float DH = 0.20f;      // humidity diffusion
 
         [Header("CO2")]
@@ -252,8 +252,8 @@ namespace WorldSim
                 // latitude runs from -90 (bottom row) to +90 (top row); insolation = cos(latitude)
                 float lat = ((y + 0.5f) / grid.Height) * Mathf.PI - Mathf.PI / 2f;
                 // PoleSun = sunlight at the poles (0 = none, 1 = same as equator)
-                const float PoleSun = 0.2f;
-                float insolation = Mathf.Lerp(PoleSun, 1f, Mathf.Cos(lat));
+                const float PoleSun = 0.25f;
+                float insolation = Mathf.Lerp(PoleSun, 1f, Mathf.Cos(lat) * 1.3f);
                 for (int x = 0; x < grid.Width; x++)
                 {
                     int i = grid.Index(x, y);

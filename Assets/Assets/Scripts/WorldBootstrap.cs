@@ -11,6 +11,7 @@ namespace WorldSim
     public class WorldBootstrap : MonoBehaviour
     {
         public TMP_Text clockTextGO;
+        [SerializeField, Min(0.01f)] float referenceTicksPerSecond = 8f; // ticks per in-game clock second
         [SerializeField] int width = 245;
         [SerializeField] int height = 245;
         [SerializeField] GridTilemapRenderer renderer;        // discrete tiles, e.g. plant growth
@@ -69,7 +70,7 @@ namespace WorldSim
             tickEngine.AddSlowSystem(new SpreadSystem(Model));
             tickEngine.AddSlowSystem(new TerrainAlbedoSystem(Model, albedo));
             tickEngine.AddSlowSystem(new AggregateSystem(Model));
-            tickEngine.AddSlowSystem(new WorldClock(Model));
+            tickEngine.AddSlowSystem(new WorldClock(clockTextGO, referenceTicksPerSecond));
             StatDisplayManager.SetModel(Model);
 
             // Check coverage

@@ -13,6 +13,7 @@ namespace WorldSim
         const float NoiseScale = 0.15f;    // Patch size (smaller = bigger patches)
         const float NoiseDrift = 0.05f;    // Patch movement per tick (0 = frozen)
         const float NoiseContrast = 2f;    // Evens out direction picks (1 = off)
+        const float LapseRate = 10f;       // deg C colder on the highest peak than at the lowest point
 
         readonly PlantModel model;
         float noiseOffset;                 // Per-world noise start, set on first tick
@@ -32,6 +33,7 @@ namespace WorldSim
             float[] co2 = grid.GetField("co2");
             float[] biomass = grid.GetField("biomass");
             float[] water = grid.GetField("water");
+            float[] hNorm = TerrainFields.GetNormalizedHeight(grid);
 
             if (!noiseOffsetSet)
             {
@@ -49,11 +51,12 @@ namespace WorldSim
             {
                 int i = grid.Index(x, y);
 
-                // Target temp: base + absorbed sun + CO2 warming - plant cooling
+                // Target temp: base + absorbed sun + CO2 warming - plant cooling - altitude cooling
                 float equilibrium = env.TOff
                                  + env.TSpan * sunlight[i] * (1f - albedo[i])
                                  + env.KCo2 * Mathf.Log(Mathf.Max(co2[i], 1f) / env.C0)
-                                 - env.KCool * transpirationTrait * biomass[i] * Mathf.Min(1f, water[i] / 0.3f);
+                                 - env.KCool * transpirationTrait * biomass[i] * Mathf.Min(1f, water[i] / 0.3f)
+                                 - LapseRate * hNorm[i];
 
                 // Neighbors: X wraps, Y clamps at poles
                 int left  = grid.Left(x, y);

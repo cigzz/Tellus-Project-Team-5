@@ -33,11 +33,6 @@ namespace WorldSim
             return norm;
         }
 
-        // Air cools with altitude. Water and albedo use this "surface" temperature so peaks
-        // freeze and snow over even though TemperatureSystem itself has no altitude term.
-        public static float SurfaceTemperature(float airTemperature, float heightNorm, float lapse)
-            => airTemperature - lapse * heightNorm;
-
         // 0 when x <= a, 1 when x >= b, linear in between.
         public static float Ramp(float x, float a, float b) => Mathf.Clamp01((x - a) / (b - a));
     }

@@ -63,5 +63,9 @@ namespace WorldSim
 
             ShowColorView(showingAlternate);
         }
+        public void ChangeFieldFilter(string fieldName)
+        {
+            this.alternateFieldName = fieldName;
+        }
     }
 }

@@ -17,7 +17,6 @@ namespace WorldSim
         public float CapacityGrowth = 0.06f;  // per deg C (~doubles every 11.5 deg C)
         public float CapacityMin = 0.04f;
         public float CapacityMax = 1.0f;
-        public float LapseRate = 10f;          // deg C colder on the highest peak than at the lowest point
 
         [Header("Evaporation")]
         public float EvapGrowth = 0.05f;      // evaporation speeds up this much per deg C above 15
@@ -132,15 +131,15 @@ namespace WorldSim
             // ---- 2. local exchange
             for (int i = 0; i < grid.CellCount; i++)
             {
-                float tSurf = TerrainFields.SurfaceTemperature(temperature[i], hNorm[i], p.LapseRate);
-                float cap = Capacity(tSurf);
+                float temp = temperature[i];
+                float cap = Capacity(temp);
                 float h = humidity[i];
                 float w = water[i];
                 float deficit = Mathf.Clamp01(1f - h / cap); // dry air pulls water up, saturated air doesn't
 
                 // Evaporation: grows exponentially with warmth, scaled by difficulty, shaded by canopy.
-                float boost = Mathf.Min(Mathf.Exp(p.EvapGrowth * (tSurf - 15f)), p.EvapMaxBoost);
-                if (tSurf <= 0f) boost *= p.FrozenEvapFactor;
+                float boost = Mathf.Min(Mathf.Exp(p.EvapGrowth * (temp - 15f)), p.EvapMaxBoost);
+                if (temp <= 0f) boost *= p.FrozenEvapFactor;
                 float canopyBiomass = traits.Canopy * biomass[i];
                 float evaporation = env.Ke * difficulty * boost * w * deficit * (1f - 0.4f * canopyBiomass);
                 float transpiration = env.Kt * traits.Transpiration * canopyBiomass * w * deficit;
@@ -159,17 +158,17 @@ namespace WorldSim
 
                 // Below freezing it falls as snow (ice); above, as water.
                 float iceAmount = ice[i] - sublimate;
-                if (tSurf < 0f) iceAmount += rain; else w += rain;
+                if (temp < 0f) iceAmount += rain; else w += rain;
 
                 // Freeze / melt.
-                if (tSurf < 0f)
+                if (temp < 0f)
                 {
-                    float freeze = p.FreezeRate * TerrainFields.Ramp(-tSurf, 0f, 10f) * w;
+                    float freeze = p.FreezeRate * TerrainFields.Ramp(-temp, 0f, 10f) * w;
                     w -= freeze; iceAmount += freeze;
                 }
                 else if (iceAmount > 0f)
                 {
-                    float melt = p.MeltRate * TerrainFields.Ramp(tSurf, 0f, 10f) * iceAmount;
+                    float melt = p.MeltRate * TerrainFields.Ramp(temp, 0f, 10f) * iceAmount;
                     iceAmount -= melt; w += melt;
                 }
 

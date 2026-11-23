@@ -7,6 +7,6 @@ public class ClockDisplayUI : MonoBehaviour
     [SerializeField] TMP_Text label;
     void Update()
     {
-        label.text = clock.TimeString;
+        if (clock != null) label.text = clock.TimeString;
     }
 }
