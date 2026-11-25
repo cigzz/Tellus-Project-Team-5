@@ -7,6 +7,8 @@ namespace WorldSim
     // the original is whatever the renderer is set to in the inspector
     public class FieldViewToggle : MonoBehaviour
     {
+        internal static event System.Action<FieldViewToggle, bool> FilterToggled;
+
         [SerializeField] ColorBlendTilemapRenderer targetRenderer;
         [SerializeField] GridTilemapRenderer otherRenderer; // turned off while the color view is on (optional)
 
@@ -62,6 +64,7 @@ namespace WorldSim
                                         originalTolerance, originalLowColor, originalOptimalColor, originalHighColor);
 
             ShowColorView(showingAlternate);
+            FilterToggled?.Invoke(this, showingAlternate);
         }
     }
 }

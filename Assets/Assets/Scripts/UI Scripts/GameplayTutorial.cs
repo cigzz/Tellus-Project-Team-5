@@ -18,10 +18,10 @@ namespace WorldSim
         const string FinishedKey = "Tellus.GameplayTutorial.V2.Finished";
 #endif
 
-        enum Step { Hover, Inspect, Plant, Speed, Evolution, Goal }
+        enum Step { Hover, Filter, Plant, Speed, Evolution, Goal }
 
         PlantPlacer planter;
-        TileInspector inspector;
+        FieldViewToggle activeTutorialFilter;
         TickEngine tickEngine;
         TickSpeedTextDriver speedControl;
         EvolutionMenu evolution;
@@ -53,7 +53,6 @@ namespace WorldSim
             SceneManager.MoveGameObjectToScene(overlay, world.gameObject.scene);
             var tutorial = overlay.AddComponent<GameplayTutorial>();
             tutorial.planter = planter;
-            tutorial.inspector = world.GetComponent<TileInspector>();
             tutorial.tickEngine = world.GetComponent<TickEngine>();
             tutorial.speedControl = FindAnyObjectByType<TickSpeedTextDriver>();
             tutorial.coverageGoal = Mathf.Clamp01(victoryCoverage);
@@ -61,18 +60,29 @@ namespace WorldSim
             tutorial.Show(Step.Hover);
         }
 
+        void OnEnable() => FieldViewToggle.FilterToggled += OnFilterToggled;
+
+        void OnDisable() => FieldViewToggle.FilterToggled -= OnFilterToggled;
+
+        void OnFilterToggled(FieldViewToggle filter, bool isOn)
+        {
+            if (step != Step.Filter || filter.gameObject.scene != gameObject.scene)
+                return;
+
+            if (isOn)
+                activeTutorialFilter = filter;
+            else if (filter == activeTutorialFilter)
+                Show(Step.Plant);
+        }
+
         void LateUpdate()
         {
-            // Check for each action after showed tutorial and increment steps
+            // check for each action after showed tutorial and increment steps
             switch (step)
             {
                 case Step.Hover:
                     if (TooltipSystem.Instance != null && TooltipSystem.Instance.IsVisible)
-                        Show(Step.Inspect);
-                    break;
-                case Step.Inspect:
-                    if (inspector == null || inspector.IsShowingDetails)
-                        Show(Step.Plant);
+                        Show(Step.Filter);
                     break;
                 case Step.Plant:
                     if (planter.HasPlanted)
@@ -104,14 +114,14 @@ namespace WorldSim
                         "Hover over interface objects to see what they do. Tooltips appear after a short delay and explain things like coverage, filters, and controls.",
                         "Rest your cursor on the coverage bar at the top until a tooltip appears.");
                     break;
-                case Step.Inspect:
-                    SetCopy("Inspect a map tile",
-                        "Individual tiles can be warmer, colder, wetter, or drier than the planet average. The tile inspector shows conditions at the spot under your cursor.",
-                        "Hover over a map tile until its details appear in the inspector at the top.");
+                case Step.Filter:
+                    SetCopy("Try a map filter",
+                        "Filters color the map so you can compare conditions across the planet. They show temperature, water, or albedo, which is how much light the ground reflects.",
+                        "Turn on any filter, then click the same button to turn it off.");
                     break;
                 case Step.Plant:
                     SetCopy("Plant your first seed",
-                        "A plant starts from one seed and spreads on its own. Use the Temperature filter to find warmer ground.",
+                        "A plant starts from one seed and spreads on its own. The Temperature filter can help you spot warmer ground.",
                         "Left-click a suitable tile near the middle of the map.");
                     break;
                 case Step.Speed:
@@ -153,7 +163,7 @@ namespace WorldSim
             Destroy(gameObject);
         }
 
-        // nothingburger tbh
+        // nothingburger code
         void BuildPanel()
         {
             var canvas = GetComponent<Canvas>();

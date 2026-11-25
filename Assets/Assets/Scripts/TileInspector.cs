@@ -25,7 +25,6 @@ namespace WorldSim
         [SerializeField] Text displayText;  // optional: assign a UI Text to auto-display the tooltip
         public event Action<string> OnShowTooltip; // event triggered when tooltip shown
         public event Action OnHideTooltip; // event triggered when tooltip hidden
-        public bool IsShowingDetails => tooltipVisible;
         Vector2Int hoveredCell; // holds coords for currently hovered cell
         bool isHoveringACell;
         bool tooltipVisible;
