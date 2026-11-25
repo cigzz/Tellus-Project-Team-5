@@ -57,6 +57,7 @@ public class TooltipSystem : MonoBehaviour
         "Pause or resume time. While paused, the planet stops changing, so it is a good time to think.");
 
     public static TooltipSystem Instance { get; private set; }
+    public bool IsVisible => shown;
 
     // EDIT PANEL AND FONT STUFF HERE
     [SerializeField] float showDelay = 1.5f;   // seconds of hovering before the tooltip appears

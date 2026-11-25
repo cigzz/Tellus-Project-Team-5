@@ -36,6 +36,9 @@ namespace WorldSim
             [SerializeField, Range(0f, 1f)] float victoryMinCoverage = 0.4f;
         EndGameSystem endGameSystem;
 
+        [Header("Tutorial")]
+        [SerializeField] bool showTutorial;
+
         // Tiers, DNA and the latest planet stats live here. PlantPlacer and the evolution menu read it.
         public PlantModel Model { get; private set; }
 
@@ -83,6 +86,9 @@ namespace WorldSim
                 if (heightRenderer != null) heightRenderer.Draw(grid);
                 if (colorRenderer != null) colorRenderer.Draw(grid);
             };
+
+            if (showTutorial)
+                GameplayTutorial.TryStart(this, victoryMinCoverage);
         }
     
 //PRESS F9 TO WIN OR F10 TO LOSE OR IN GAMEMANAGER MENU
