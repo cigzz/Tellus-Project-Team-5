@@ -7,13 +7,13 @@ namespace WorldSim
     public class TemperatureSystem : ITickSystem
     {
         // --- Tuning ---
-        const int OuterRingSize = 2;            // Outer ring distance (above 4 may look odd)
-        const float FarWeight = 0.5f;      // Outer ring strength (0 = off, 1 = same as direct neighbors)
+        const int OuterRingSize = 3;            // Outer ring distance (above 4 may look odd)
+        const float FarWeight = 0.75f;      // Outer ring strength (0 = off, 1 = same as direct neighbors)
         const float Smoothness = 0.5f;         // Random lean strength (0 = none, 0.2 subtle, 0.5+ jagged)
-        const float NoiseScale = 0.15f;    // Patch size (smaller = bigger patches)
-        const float NoiseDrift = 0.05f;    // Patch movement per tick (0 = frozen)
+        const float NoiseScale = 0.25f;    // Patch size (smaller = bigger patches)
+        const float NoiseDrift = 0.03f;    // Patch movement per tick (0 = frozen)
         const float NoiseContrast = 2f;    // Evens out direction picks (1 = off)
-        const float LapseRate = 10f;       // deg C colder on the highest peak than at the lowest point
+        const float LapseRate = 15f;       // deg C colder on the highest peak than at the lowest point
 
         readonly PlantModel model;
         float noiseOffset;                 // Per-world noise start, set on first tick

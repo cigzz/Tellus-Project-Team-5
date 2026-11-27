@@ -40,7 +40,19 @@ namespace WorldSim
         readonly PlantModel model;
         public CarbonMixingSystem(PlantModel model) { this.model = model; }
 
-        public void Tick(WorldGrid g, int tickNumber) => FieldOps.Diffuse(g, "co2", model.Env.DC);
+        public void Tick(WorldGrid g, int tickNumber)
+        {
+            FieldOps.Diffuse(g, "co2", model.Env.DC);
+
+            // Global blend toward the planet mean. Mean is taken before any tile changes, so the total is conserved.
+            float k = model.Env.GlobalMix;
+            if (k <= 0f) return;
+            float[] c = g.GetField("co2");
+            float mean = 0f;
+            for (int i = 0; i < g.CellCount; i++) mean += c[i];
+            mean /= g.CellCount;
+            for (int i = 0; i < g.CellCount; i++) c[i] += k * (mean - c[i]);
+        }
     }
 
     // ---------------------------------------------------------------- suitability
@@ -72,9 +84,11 @@ namespace WorldSim
         readonly float[] table;
         readonly float min, scale;
         readonly int n;
+        public readonly FactorCurve Curve; // kept so a death can be blamed on the low or high side of the optimum
 
         public WeightedLogLut(FactorCurve c, float min, float max, int n = 256)
         {
+            Curve = c;
             this.n = n;
             this.min = min;
             scale = (n - 1) / (max - min);
@@ -107,6 +121,7 @@ namespace WorldSim
             lutL = new WeightedLogLut(new FactorCurve(0.10f, 0.40f, 0.90f, 1.00f, 0.20f), 0f, 1f);           // light = S0 * (1 - albedo)
             lutC = new WeightedLogLut(new FactorCurve(150f, 300f, 1200f, 5000f, 0.10f), 0f, 6000f, 512);   // CO2, ppm
             lutH = new WeightedLogLut(new FactorCurve(0.02f, 0.10f, 0.60f, 1.00f, 0.10f), 0f, 1f);           // humidity
+            model.Suitability = this; // lets GrowthSystem ask why a tile died
         }
 
         public void Tick(WorldGrid g, int tickNumber)
@@ -131,6 +146,47 @@ namespace WorldSim
                 suit[i] = Mathf.Exp(ln);
             }
         }
+
+        enum Factor { Temperature, Water, Light, Co2, Humidity }
+
+        // Called by GrowthSystem only for a tile that just died, so recomputing five lookups here is cheap.
+        // Each lookup is w * ln(f) <= 0, so the most negative one is the factor that pulled suitability down the most.
+        // Which side of that factor's optimum the tile is on picks between the paired causes (cold vs heat, etc.).
+        public PlantDeathCause DiagnoseDeath(WorldGrid g, int i)
+        {
+            float t = g.GetField("tempEma")[i];
+            float w = g.GetField("water")[i];
+            float l = g.GetField("lightEma")[i];
+            float c = g.GetField("co2")[i];
+            float h = g.GetField("humidity")[i];
+
+            Factor worst = Factor.Temperature;
+            float worstLn = lutT.Get(t);
+            Consider(Factor.Water, lutW.Get(w), ref worst, ref worstLn);
+            Consider(Factor.Light, lutL.Get(l), ref worst, ref worstLn);
+            Consider(Factor.Co2, lutC.Get(c), ref worst, ref worstLn);
+            Consider(Factor.Humidity, lutH.Get(h), ref worst, ref worstLn);
+
+            if (worstLn > -1e-3f) return PlantDeathCause.Unknown; // every factor was near its optimum
+
+            switch (worst)
+            {
+                case Factor.Temperature: return Below(t, lutT) ? PlantDeathCause.Cold : PlantDeathCause.Heat;
+                case Factor.Water:       return Below(w, lutW) ? PlantDeathCause.Drought : PlantDeathCause.Waterlogged;
+                case Factor.Light:       return Below(l, lutL) ? PlantDeathCause.Darkness : PlantDeathCause.Scorch;
+                case Factor.Co2:         return Below(c, lutC) ? PlantDeathCause.CarbonStarved : PlantDeathCause.CarbonOverload;
+                case Factor.Humidity:    return Below(h, lutH) ? PlantDeathCause.DryAir : PlantDeathCause.Humid;
+                default:                 return PlantDeathCause.Unknown;
+            }
+        }
+
+        static void Consider(Factor f, float ln, ref Factor worst, ref float worstLn)
+        {
+            if (ln < worstLn) { worst = f; worstLn = ln; }
+        }
+
+        // True if x is on the low side of the factor's optimal band.
+        static bool Below(float x, WeightedLogLut lut) => x < (lut.Curve.OptLo + lut.Curve.OptHi) * 0.5f;
     }
 
     // ---------------------------------------------------------------- growth
@@ -143,6 +199,7 @@ namespace WorldSim
     public class GrowthSystem : ITickSystem
     {
         readonly PlantModel model;
+        readonly PlantDeathReport deathReport = new PlantDeathReport();
         public GrowthSystem(PlantModel model) { this.model = model; }
 
         public void Tick(WorldGrid g, int tickNumber)
@@ -156,22 +213,29 @@ namespace WorldSim
             float[] C = g.GetField("co2");
 
             float income = 0f;
+            deathReport.Begin(tickNumber);
             for (int i = 0; i < g.CellCount; i++)
             {
                 float b = B[i];
                 if (b <= 0f) continue;
+                deathReport.AliveBefore++;
 
                 float s = S[i];
                 float shortfall = 1f - s;
                 float db = rEff * s * b * (1f - b) - p.Mu * shortfall * shortfall * b;
                 float bn = Mathf.Clamp01(b + db);
-                if (bn < p.BExt) bn = 0f; // extinct: all its carbon returns to the air via the line below
+                if (bn < p.BExt)
+                {
+                    bn = 0f; // extinct: all its carbon returns to the air via the line below
+                    deathReport.Add(model.Suitability != null ? model.Suitability.DiagnoseDeath(g, i) : PlantDeathCause.Unknown);
+                }
 
                 C[i] -= p.Kc * (bn - b);
                 B[i] = bn;
                 if (bn > 0f) income += tr.Canopy * bn * (1 + tr.PigmentTier);
             }
 
+            model.RaisePlantDeaths(deathReport); // sent every slow tick, even with 0 deaths, so the alert window keeps moving
             model.Evolution.AddIncome(income / g.CellCount);
         }
     }

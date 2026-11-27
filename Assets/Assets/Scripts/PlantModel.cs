@@ -19,6 +19,18 @@ namespace WorldSim
         public float Lambda = 0.15f;  // relaxation toward equilibrium per fast tick
         public float DT = 0.20f;      // temperature diffusion. Keep Lambda + DT <= 1
 
+        [Header("Sunlight and seasons (InsolationSystem)")]
+        [Tooltip("Lowest sunlight anywhere: the poles at equinox and during polar night (0 = none, 1 = same as the equator).")]
+        [Range(0f, 1f)] public float PoleSun = 0.25f;
+        [Tooltip("Multiplies sunlight before it is capped at 1. Above 1 widens the fully lit tropical band.")]
+        public float SunGain = 1.3f;
+        [Tooltip("Weight on the cosine falloff toward the poles: 1 = pure cosine, lower = gentler drop-off (more polar sun), higher = sharper.")]
+        [Range(0.1f, 2f)] public float CosWeight = 1f;
+        [Tooltip("Season intensity: axial tilt in degrees. 0 = no seasons, 23.4 = Earth, 45+ = extreme.")]
+        [Range(0f, 60f)] public float SeasonTilt = 23.44f;
+        [Tooltip("Season frequency: ticks per full cycle of spring, summer, autumn and winter.")]
+        [Min(1)] public int SeasonLengthTicks = 600;
+
         [Header("Water")]
         public float Ke = 0.02f;      // evaporation
         public float Kt = 0.03f;      // transpiration
@@ -29,6 +41,8 @@ namespace WorldSim
         [Header("CO2")]
         public float DC = 0.30f;      // CO2 mixing
         public float StartCo2 = 600f; // ppm
+        [Tooltip("Share of each tile's difference from the planet-mean CO2 removed per tick. Keeps the atmosphere well mixed.")]
+        [Range(0f, 1f)] public float GlobalMix = 0.02f;
 
         [Header("Start values")]
         public float StartWater = 0.5f;
@@ -199,6 +213,12 @@ namespace WorldSim
         public readonly EvolutionModel Evolution = new EvolutionModel();
         public PlantStats Stats;
 
+        // Raised by GrowthSystem once per slow tick with that tick's deaths counted by cause (see PlantDeathAlertDriver).
+        // The report object is reused every tick: copy what you need, don't keep it.
+        public event Action<PlantDeathReport> PlantDeathsReported;
+        internal SuitabilitySystem Suitability; // set by SuitabilitySystem so GrowthSystem can ask why a tile died
+        internal void RaisePlantDeaths(PlantDeathReport report) => PlantDeathsReported?.Invoke(report);
+
         // Cached: systems read this every tick (CanGrowAt even reads it per tile), and building it uses Pow.
         // Rebuilt when a tier changes or TraitStrength is edited in the Inspector.
         PlantTraits traits;
@@ -247,17 +267,15 @@ namespace WorldSim
             grid.GetField("suitability");
             grid.GetField("plantGrowth");
 
+            // Tick 0 is the northern spring equinox, so both hemispheres start evenly lit.
+            InsolationSystem.Fill(grid, Env, 0);
+
             for (int y = 0; y < grid.Height; y++)
             {
-                // latitude runs from -90 (bottom row) to +90 (top row); insolation = cos(latitude)
-                float lat = ((y + 0.5f) / grid.Height) * Mathf.PI - Mathf.PI / 2f;
-                // PoleSun = sunlight at the poles (0 = none, 1 = same as equator)
-                const float PoleSun = 0.25f;
-                float insolation = Mathf.Lerp(PoleSun, 1f, Mathf.Cos(lat) * 1.3f);
                 for (int x = 0; x < grid.Width; x++)
                 {
                     int i = grid.Index(x, y);
-                    s0[i] = insolation;
+                    float insolation = s0[i];
                     // start every tile at its bare-ground equilibrium so the first ticks don't swing wildly
                     float teq = Env.TOff + Env.TSpan * insolation * (1f - albedo[i]) + Env.KCo2 * Mathf.Log(Env.StartCo2 / Env.C0);
                     temperature[i] = teq;

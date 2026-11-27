@@ -23,6 +23,8 @@ namespace WorldSim
         public float EvapMaxBoost = 4f;       // cap on that speed-up
         public float FrozenEvapFactor = 0.15f;// evaporation multiplier at or below 0 deg C
         public float Sublimation = 1f;        // ice turning straight to vapour, relative to water evaporation
+        [Tooltip("Sublimation always runs at least this share of its dry-air rate, so saturated polar air can't stop it.")]
+        [Range(0f, 1f)] public float SublimationMinDeficit = 0.3f;
 
         [Header("Rain and snow")]
         public float OverflowRain = 0.35f;    // share of vapour above capacity that falls each tick
@@ -30,6 +32,10 @@ namespace WorldSim
         [Header("Ice")]
         public float FreezeRate = 0.04f;      // share of surface water frozen per tick at -10 deg C
         public float MeltRate = 0.05f;        // share of ice melted per tick at +10 deg C
+        [Tooltip("Glacier flow: share of the ice difference between two tiles moved per tick once the ice is thick. Keep <= 0.25.")]
+        public float IceFlow = 0.05f;
+        [Tooltip("Ice thickness at which flow reaches full IceFlow speed. Thinner ice flows proportionally slower.")]
+        public float IceFlowFullAt = 1.5f;
 
         [Header("Runoff (water flows downhill)")]
         public float RunoffRate = 0.2f;       // keep <= 0.25 so 4 neighbours can't overshoot
@@ -145,7 +151,8 @@ namespace WorldSim
                 float transpiration = env.Kt * traits.Transpiration * canopyBiomass * w * deficit;
                 float lift = Mathf.Min(evaporation + transpiration, w);
                 // Ice sublimates slowly into dry air, so cold traps don't swallow the planet's water for good.
-                float sublimate = Mathf.Min(p.Sublimation * env.Ke * difficulty * boost * ice[i] * deficit, ice[i]);
+                float subDeficit = Mathf.Max(deficit, p.SublimationMinDeficit);
+                float sublimate = Mathf.Min(p.Sublimation * env.Ke * difficulty * boost * ice[i] * subDeficit, ice[i]);
 
                 // Rain: steady drizzle that grows as the air nears saturation, plus a downpour of
                 // anything above capacity. Air pushed up a mountain cools, loses capacity and rains out.
@@ -190,9 +197,48 @@ namespace WorldSim
             Runoff(grid, water);
             FieldOps.Diffuse(grid, "water", env.DW);
             FieldOps.Diffuse(grid, "groundwater", p.GroundwaterDiffusion);
+            IceFlow(grid, ice);
 
             Stats = CollectStats(grid, meanHumidity, vapourWarming, rainMult);
             Latest = Stats;
+        }
+
+        float[] iceDelta; // scratch for IceFlow, allocated on first use
+
+        // Glacier flow: ice moves from thicker to thinner neighbours. Speed scales with the shared thickness of
+        // each pair, so thin frost barely moves while thick sheets spread outward toward warmer tiles and melt.
+        // Each edge is handled once and the amount leaving one tile is added to the other, so water is conserved.
+        void IceFlow(WorldGrid grid, float[] ice)
+        {
+            if (p.IceFlow <= 0f) return;
+            if (iceDelta == null || iceDelta.Length != grid.CellCount) iceDelta = new float[grid.CellCount];
+            Array.Clear(iceDelta, 0, iceDelta.Length);
+
+            float rate = Mathf.Min(p.IceFlow, 0.25f);   // 4 neighbours: above 0.25 a tile could overshoot
+            float fullAt = Mathf.Max(p.IceFlowFullAt, 1e-3f);
+
+            for (int y = 0; y < grid.Height; y++)
+            {
+                for (int x = 0; x < grid.Width; x++)
+                {
+                    int i = grid.Index(x, y);
+                    Exchange(i, grid.Right(x, y));
+                    int up = grid.Up(x, y);
+                    if (up != i) Exchange(i, up);       // top row clamps to itself: no edge
+                }
+            }
+
+            for (int i = 0; i < grid.CellCount; i++) ice[i] = Mathf.Max(ice[i] + iceDelta[i], 0f);
+
+            void Exchange(int a, int b)
+            {
+                float diff = ice[a] - ice[b];
+                if (diff == 0f) return;
+                float thickness = Mathf.Clamp01(0.5f * (ice[a] + ice[b]) / fullAt);
+                float flow = rate * thickness * diff;
+                iceDelta[a] -= flow;
+                iceDelta[b] += flow;
+            }
         }
 
         // Smooth, slightly irregular planet-wide wet/dry cycle. 1 = normal rain.

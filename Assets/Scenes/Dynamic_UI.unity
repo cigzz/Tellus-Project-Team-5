@@ -700,11 +700,11 @@ MonoBehaviour:
   targetRenderer: {fileID: 168468608}
   otherRenderer: {fileID: 168468604}
   alternateFieldName: temperature
-  alternateMinValue: 0
+  alternateMinValue: -5
   alternateOptimalValue: 20
   alternateMaxValue: 50
-  alternateTolerance: 5
-  alternateLowColor: {r: 0.2561028, g: 0, b: 1, a: 1}
+  alternateTolerance: 3
+  alternateLowColor: {r: 0.38554507, g: 0.0047169924, b: 1, a: 1}
   alternateOptimalColor: {r: 0, g: 1, b: 0, a: 1}
   alternateHighColor: {r: 1, g: 0.11461386, b: 0, a: 1}
 --- !u!1 &111727214
@@ -1336,6 +1336,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155694478}
   m_CullTransparentMesh: 1
+--- !u!1 &156810575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 156810576}
+  m_Layer: 0
+  m_Name: DeathWarning
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &156810576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156810575}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 693, y: 15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1680806067}
+  m_Father: {fileID: 896810380}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &162296323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,6 +1485,7 @@ GameObject:
   - component: {fileID: 168468603}
   - component: {fileID: 168468602}
   - component: {fileID: 168468607}
+  - component: {fileID: 168468609}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1484,31 +1517,37 @@ MonoBehaviour:
   maxHeight: 100
   env:
     TOff: -20
-    TSpan: 60
+    TSpan: 70
     KCo2: 6
     C0: 280
-    KCool: 8
-    Lambda: 0.1
+    KCool: 10
+    Lambda: 0.04
     DT: 0.6
+    PoleSun: 0.19
+    SunGain: 1.3
+    CosWeight: 0.6
+    SeasonTilt: 5
+    SeasonLengthTicks: 800
     Ke: 0.04
     Kt: 0.03
     Kr: 0.15
     DW: 0.6
     DH: 0.2
-    DC: 0.8
+    DC: 0.65
     StartCo2: 500
-    StartWater: 1.5
+    GlobalMix: 0.01
+    StartWater: 1.25
     StartHumidity: 0.1
-    A0: 0.3
-    Ka: 0.3
-    PRef: 0.4
-    AMax: 0.9
+    A0: 0.45
+    Ka: 0.2
+    PRef: 0.2
+    AMax: 0.8
   growth:
     R0: 0.2
     Mu: 0.12
     BSeed: 0.05
     BExt: 0.01
-    Kc: 400
+    Kc: 300
     Kappa: 2
     PressureDecay: 0.9
     MinSeedSuit: 0.15
@@ -1526,18 +1565,21 @@ MonoBehaviour:
     CapacityGrowth: 0.06
     CapacityMin: 0.04
     CapacityMax: 1
-    EvapGrowth: 0.05
-    EvapMaxBoost: 4
+    EvapGrowth: 0.1
+    EvapMaxBoost: 5
     FrozenEvapFactor: 0.15
-    Sublimation: 2
-    OverflowRain: 0.35
+    Sublimation: 1.5
+    SublimationMinDeficit: 0.1
+    OverflowRain: 0.3
     FreezeRate: 0.02
-    MeltRate: 0.2
-    RunoffRate: 0.5
+    MeltRate: 0.02
+    IceFlow: 0.02
+    IceFlowFullAt: 2
+    RunoffRate: 0.65
     WaterDepthScale: 5
     MaxRunoffShare: 0.5
     SoilRetention: 0.3
-    Infiltration: 0.004
+    Infiltration: 0.003
     SpringRate: 0.01
     GroundwaterDiffusion: 0.1
     StartGroundwater: 0.4
@@ -1547,15 +1589,15 @@ MonoBehaviour:
     DroughtAmplitude: 0.35
     DroughtPeriodTicks: 1200
   albedo:
-    LowlandAlbedo: 0.1
-    HighlandAlbedo: 0.5
+    LowlandAlbedo: 0.18
+    HighlandAlbedo: 0.4
     HeightCurve: 0.8
-    WaterAlbedo: 0.06
-    WetFrom: 0.4
-    WetFull: 1.5
+    WaterAlbedo: 0.1
+    WetFrom: 0.7
+    WetFull: 1.8
     MaxWaterCover: 0.8
-    IceAlbedo: 0.75
-    IceFull: 1.5
+    IceAlbedo: 0.6
+    IceFull: 1.2
     CanopyHidesSnow: 0.5
     MinAlbedo: 0.04
   victoryMinCoverage: 0.25
@@ -1664,13 +1706,13 @@ MonoBehaviour:
   shadeWeight: 0.62
   showWater: 1
   waterField: water
-  waterThreshold: 0.9
-  deepWaterValue: 3
+  waterThreshold: 0.7
+  deepWaterValue: 2.25
   shallowWaterColor: {r: 0.55, g: 0.75, b: 1, a: 1}
   deepWaterColor: {r: 0.05, g: 0.15, b: 0.5, a: 1}
   showIce: 1
   iceField: ice
-  iceThreshold: 0.2
+  iceThreshold: 0.3
   oceanTile: {fileID: 0}
   iceTile: {fileID: 0}
   colorSteps: 16
@@ -1713,6 +1755,83 @@ MonoBehaviour:
   optimalColor: {r: 0, g: 1, b: 0, a: 1}
   highColor: {r: 1, g: 0, b: 0, a: 1}
   colorSteps: 32
+--- !u!114 &168468609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168468597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f367ac539e0bdb4f988c46414bcb71f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldSim.PlantDeathAlertDriver
+  alertRoot: {fileID: 156810575}
+  icon: {fileID: 2128234523}
+  label: {fileID: 1375222891}
+  tooltip: {fileID: 0}
+  windowSlowTicks: 15
+  minDeathsToAlert: 7
+  lowRate: 0.01
+  moderateRate: 0.03
+  highRate: 0.08
+  criticalRate: 0.15
+  lowColor: {r: 0.95, g: 0.85, b: 0.35, a: 1}
+  moderateColor: {r: 0.98, g: 0.6, b: 0.2, a: 1}
+  highColor: {r: 0.92, g: 0.3, b: 0.2, a: 1}
+  criticalColor: {r: 0.75, g: 0.1, b: 0.35, a: 1}
+  blendColors: 1
+  holdSlowTicks: 6
+  causeSwitchMargin: 0.15
+  pulseOnCritical: 1
+  pulseSpeed: 4
+  pulseMinAlpha: 0.45
+  causeVisuals:
+  - cause: 0
+    icon: {fileID: 0}
+    title: Plants Dying
+    advice: Plants are dying! Check the field views to see which conditions changed.
+  - cause: 1
+    icon: {fileID: 0}
+    title: Too Cold
+    advice: It is too cold for the plants. Darker pigmentation absorbs more sunlight and warms the land, and CO2 in the air traps heat.
+  - cause: 2
+    icon: {fileID: 0}
+    title: Too Hot
+    advice: It is too hot for the plants. Lighter pigmentation reflects sunlight, and darker transpiration cools the land.
+  - cause: 3
+    icon: {fileID: 0}
+    title: Drought
+    advice: The soil is too dry. Transpiration pulls water out of the ground, so lower transpiration keeps more of it in the soil.
+  - cause: 4
+    icon: {fileID: 0}
+    title: Waterlogged
+    advice: The ground is saturated with water. Higher transpiration moves more water out of the soil and into the air.
+  - cause: 5
+    icon: {fileID: 0}
+    title: Too Little Light
+    advice: Not enough sunlight reaches the plants. Very light pigmentation reflects light away; darker leaves absorb more of it.
+  - cause: 6
+    icon: {fileID: 0}
+    title: Too Much Light
+    advice: The plants are getting more sunlight than they can handle. Lighter pigmentation reflects some of it away.
+  - cause: 7
+    icon: {fileID: 0}
+    title: CO2 Starved
+    advice: Every plant locks CO2 into its biomass. With this much growth, the air no longer has enough CO2 to keep them alive.
+  - cause: 8
+    icon: {fileID: 0}
+    title: Too Much CO2
+    advice: CO2 levels are above what the plants can tolerate. More plant cover pulls carbon out of the air.
+  - cause: 9
+    icon: {fileID: 0}
+    title: Dry Air
+    advice: The air is too dry. Higher transpiration releases water vapour that raises humidity.
+  - cause: 10
+    icon: {fileID: 0}
+    title: Too Humid
+    advice: The air holds too much moisture. Lower transpiration puts less water vapour into the air.
 --- !u!1 &187363321
 GameObject:
   m_ObjectHideFlags: 0
@@ -8051,12 +8170,12 @@ MonoBehaviour:
   otherRenderer: {fileID: 168468604}
   alternateFieldName: water
   alternateMinValue: 0
-  alternateOptimalValue: 0.5
-  alternateMaxValue: 1
-  alternateTolerance: 0.2
+  alternateOptimalValue: 0.35
+  alternateMaxValue: 3
+  alternateTolerance: 0.08
   alternateLowColor: {r: 1, g: 0.0047169924, b: 0.0047169924, a: 1}
   alternateOptimalColor: {r: 0, g: 1, b: 0.09776533, a: 1}
-  alternateHighColor: {r: 0, g: 0, b: 1, a: 1}
+  alternateHighColor: {r: 0.00000008322158, g: 0, b: 0.6981132, a: 1}
 --- !u!1 &825015071
 GameObject:
   m_ObjectHideFlags: 0
@@ -8765,6 +8884,7 @@ RectTransform:
   - {fileID: 505477545}
   - {fileID: 1273683476}
   - {fileID: 932762434}
+  - {fileID: 156810576}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -16475,7 +16595,7 @@ MonoBehaviour:
   alternateMinValue: 0
   alternateOptimalValue: 0.3
   alternateMaxValue: 1
-  alternateTolerance: 0.1
+  alternateTolerance: 0.05
   alternateLowColor: {r: 0, g: 0, b: 0, a: 1}
   alternateOptimalColor: {r: 0, g: 1, b: 0, a: 1}
   alternateHighColor: {r: 1, g: 1, b: 1, a: 1}
@@ -16830,6 +16950,143 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364681903}
+  m_CullTransparentMesh: 1
+--- !u!1 &1375222889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1375222890}
+  - component: {fileID: 1375222892}
+  - component: {fileID: 1375222891}
+  m_Layer: 5
+  m_Name: AlertText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1375222890
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375222889}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1680806067}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 62.5}
+  m_SizeDelta: {x: 275, y: 125}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1375222891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375222889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 70ee50e00eadcb94d8a203c48cc4b238, type: 2}
+  m_sharedMaterial: {fileID: 994810748136718612, guid: 70ee50e00eadcb94d8a203c48cc4b238, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 18
+  m_fontSizeBase: 18
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656bu
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -4.5892944, w: -10.708221}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1375222892
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375222889}
   m_CullTransparentMesh: 1
 --- !u!1 &1401524538
 GameObject:
@@ -18957,6 +19214,83 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClockDisplayUI
   label: {fileID: 1662162367}
+--- !u!1 &1680806066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680806067}
+  - component: {fileID: 1680806069}
+  - component: {fileID: 1680806068}
+  m_Layer: 5
+  m_Name: PopUps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1680806067
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680806066}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2128234522}
+  - {fileID: 1375222890}
+  m_Father: {fileID: 156810576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 117, y: -15}
+  m_SizeDelta: {x: 300, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1680806068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680806066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1680806069
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680806066}
+  m_CullTransparentMesh: 1
 --- !u!1 &1693103614
 GameObject:
   m_ObjectHideFlags: 0
@@ -19166,9 +19500,9 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3189696}
   m_HandleRect: {fileID: 3189695}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 0.101
-  m_NumberOfSteps: 0
+  m_Value: 0.1
+  m_Size: 0.1
+  m_NumberOfSteps: 11
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22113,6 +22447,104 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110721898}
   m_CullTransparentMesh: 1
+--- !u!1 &2128234521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2128234522}
+  - component: {fileID: 2128234524}
+  - component: {fileID: 2128234523}
+  - component: {fileID: 2128234525}
+  m_Layer: 5
+  m_Name: DyingIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2128234522
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128234521}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1680806067}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -80}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2128234523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128234521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -8928315410184212672, guid: 59f356e83e93c36419c1f645cd9ae00e, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2128234524
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128234521}
+  m_CullTransparentMesh: 1
+--- !u!95 &2128234525
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128234521}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f37e228b3ae791488cbdd04cacf01f2, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2129420453
 GameObject:
   m_ObjectHideFlags: 0

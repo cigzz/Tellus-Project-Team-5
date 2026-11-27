@@ -1,0 +1,6200 @@
+fileFormatVersion: 2
+guid: 59f356e83e93c36419c1f645cd9ae00e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8928315410184212672
+    second: DyingIcon_0
+  - first:
+      213: -4813354885986662863
+    second: DyingIcon_1
+  - first:
+      213: -7100040803817331197
+    second: DyingIcon_2
+  - first:
+      213: 750232928194354963
+    second: DyingIcon_3
+  - first:
+      213: -5887343042749452301
+    second: DyingIcon_4
+  - first:
+      213: -7873507092575897903
+    second: DyingIcon_5
+  - first:
+      213: -426684916162280535
+    second: DyingIcon_6
+  - first:
+      213: 6752981501083700095
+    second: DyingIcon_7
+  - first:
+      213: 758348225592547698
+    second: DyingIcon_8
+  - first:
+      213: -532267612915476800
+    second: DyingIcon_9
+  - first:
+      213: 2606297997107784983
+    second: DyingIcon_10
+  - first:
+      213: -227956420881639762
+    second: DyingIcon_11
+  - first:
+      213: -4412374375019062592
+    second: DyingIcon_12
+  - first:
+      213: 3256134820845255164
+    second: DyingIcon_13
+  - first:
+      213: 5169423858798983440
+    second: DyingIcon_14
+  - first:
+      213: -1030039532156311995
+    second: DyingIcon_15
+  - first:
+      213: 3019419527527454978
+    second: DyingIcon_16
+  - first:
+      213: 81144448148556744
+    second: DyingIcon_17
+  - first:
+      213: -6514917742398182681
+    second: DyingIcon_18
+  - first:
+      213: -2637622740822515390
+    second: DyingIcon_19
+  - first:
+      213: 7705301807730940268
+    second: DyingIcon_20
+  - first:
+      213: -2831321760377287146
+    second: DyingIcon_21
+  - first:
+      213: -2028607282934985645
+    second: DyingIcon_22
+  - first:
+      213: -546994595739001818
+    second: DyingIcon_23
+  - first:
+      213: 4218495813385670910
+    second: DyingIcon_24
+  - first:
+      213: -893410831767009311
+    second: DyingIcon_25
+  - first:
+      213: 7732717457978054312
+    second: DyingIcon_26
+  - first:
+      213: -5986693039325620745
+    second: DyingIcon_27
+  - first:
+      213: 4659549547021911810
+    second: DyingIcon_28
+  - first:
+      213: -3220630243932280138
+    second: DyingIcon_29
+  - first:
+      213: -7567305336967597402
+    second: DyingIcon_30
+  - first:
+      213: 4091913582921208294
+    second: DyingIcon_31
+  - first:
+      213: 7724442342266213006
+    second: DyingIcon_32
+  - first:
+      213: 3904018316334638758
+    second: DyingIcon_33
+  - first:
+      213: -7575957402693703130
+    second: DyingIcon_34
+  - first:
+      213: 6405150638145019186
+    second: DyingIcon_35
+  - first:
+      213: 3807750629273426590
+    second: DyingIcon_36
+  - first:
+      213: 5705327922932877870
+    second: DyingIcon_37
+  - first:
+      213: 2415372276229574751
+    second: DyingIcon_38
+  - first:
+      213: -2651351260599278156
+    second: DyingIcon_39
+  - first:
+      213: 8661508604521035403
+    second: DyingIcon_40
+  - first:
+      213: 4557085523964832079
+    second: DyingIcon_41
+  - first:
+      213: 4711602957669982632
+    second: DyingIcon_42
+  - first:
+      213: 1731442677779016531
+    second: DyingIcon_43
+  - first:
+      213: 4708689215241231833
+    second: DyingIcon_44
+  - first:
+      213: 7893308160075996562
+    second: DyingIcon_45
+  - first:
+      213: -3390634181598701632
+    second: DyingIcon_46
+  - first:
+      213: -4352023382373527861
+    second: DyingIcon_47
+  - first:
+      213: -6101743014768056409
+    second: DyingIcon_48
+  - first:
+      213: -1683573005658818002
+    second: DyingIcon_49
+  - first:
+      213: 4702167440227148879
+    second: DyingIcon_50
+  - first:
+      213: 528174378750304044
+    second: DyingIcon_51
+  - first:
+      213: -1368509075694217883
+    second: DyingIcon_52
+  - first:
+      213: -4290288639728367226
+    second: DyingIcon_53
+  - first:
+      213: 2120934444204630228
+    second: DyingIcon_54
+  - first:
+      213: -585607166300678931
+    second: DyingIcon_55
+  - first:
+      213: -4933650543124250064
+    second: DyingIcon_56
+  - first:
+      213: 6157653367094709120
+    second: DyingIcon_57
+  - first:
+      213: 7148508726147209798
+    second: DyingIcon_58
+  - first:
+      213: -2505808324636315018
+    second: DyingIcon_59
+  - first:
+      213: -2183399807208496087
+    second: DyingIcon_60
+  - first:
+      213: 5651868243542655198
+    second: DyingIcon_61
+  - first:
+      213: 1271216444019204277
+    second: DyingIcon_62
+  - first:
+      213: 171845869726562219
+    second: DyingIcon_63
+  - first:
+      213: -5749992733507498492
+    second: DyingIcon_64
+  - first:
+      213: 6720571001959515944
+    second: DyingIcon_65
+  - first:
+      213: 230887821180278481
+    second: DyingIcon_66
+  - first:
+      213: -2426153539560821777
+    second: DyingIcon_67
+  - first:
+      213: 56464815653993497
+    second: DyingIcon_68
+  - first:
+      213: -3751801054099863271
+    second: DyingIcon_69
+  - first:
+      213: -4291682597110777590
+    second: DyingIcon_70
+  - first:
+      213: -5681537043970653420
+    second: DyingIcon_71
+  - first:
+      213: 8287575854868404652
+    second: DyingIcon_72
+  - first:
+      213: 2680787104832807962
+    second: DyingIcon_73
+  - first:
+      213: 7328312268148651629
+    second: DyingIcon_74
+  - first:
+      213: -2529069434157785002
+    second: DyingIcon_75
+  - first:
+      213: -1371119522924434952
+    second: DyingIcon_76
+  - first:
+      213: 2696102387883118309
+    second: DyingIcon_77
+  - first:
+      213: 6588549241712146690
+    second: DyingIcon_78
+  - first:
+      213: -8088060391388705719
+    second: DyingIcon_79
+  - first:
+      213: -3141542630902848305
+    second: DyingIcon_80
+  - first:
+      213: -4187162656992622844
+    second: DyingIcon_81
+  - first:
+      213: 3399495854883336055
+    second: DyingIcon_82
+  - first:
+      213: -5539763279594613292
+    second: DyingIcon_83
+  - first:
+      213: 2417989469355838502
+    second: DyingIcon_84
+  - first:
+      213: 94788758066972761
+    second: DyingIcon_85
+  - first:
+      213: -1343853552592179691
+    second: DyingIcon_86
+  - first:
+      213: 8905086540845648947
+    second: DyingIcon_87
+  - first:
+      213: 4880429198547295736
+    second: DyingIcon_88
+  - first:
+      213: 8707286661909181557
+    second: DyingIcon_89
+  - first:
+      213: 837748157726619653
+    second: DyingIcon_90
+  - first:
+      213: 2482394331425238606
+    second: DyingIcon_91
+  - first:
+      213: -6577526104629088682
+    second: DyingIcon_92
+  - first:
+      213: 6430114251559111053
+    second: DyingIcon_93
+  - first:
+      213: -279103773646919992
+    second: DyingIcon_94
+  - first:
+      213: 4243898620430731965
+    second: DyingIcon_95
+  - first:
+      213: -4331424481835077336
+    second: DyingIcon_96
+  - first:
+      213: -7353785589797759252
+    second: DyingIcon_97
+  - first:
+      213: 4624730302965723960
+    second: DyingIcon_98
+  - first:
+      213: 292217516281654897
+    second: DyingIcon_99
+  - first:
+      213: 3842911600234452445
+    second: DyingIcon_100
+  - first:
+      213: -7350329934854596443
+    second: DyingIcon_101
+  - first:
+      213: 5574136086718852351
+    second: DyingIcon_102
+  - first:
+      213: -8212868069176673887
+    second: DyingIcon_103
+  - first:
+      213: 8125216058057960980
+    second: DyingIcon_104
+  - first:
+      213: 535446322341073859
+    second: DyingIcon_105
+  - first:
+      213: -8094147050501096003
+    second: DyingIcon_106
+  - first:
+      213: -6483112768247280102
+    second: DyingIcon_107
+  - first:
+      213: 905463206462568571
+    second: DyingIcon_108
+  - first:
+      213: -5917110223600630051
+    second: DyingIcon_109
+  - first:
+      213: -7381019316125820440
+    second: DyingIcon_110
+  - first:
+      213: 4949017603720612551
+    second: DyingIcon_111
+  - first:
+      213: 724845082984446139
+    second: DyingIcon_112
+  - first:
+      213: 17191410397700615
+    second: DyingIcon_113
+  - first:
+      213: -5784755874391735300
+    second: DyingIcon_114
+  - first:
+      213: -4440128844865772860
+    second: DyingIcon_115
+  - first:
+      213: -4813731746773391052
+    second: DyingIcon_116
+  - first:
+      213: -3878079932960394322
+    second: DyingIcon_117
+  - first:
+      213: -4260383065048261992
+    second: DyingIcon_118
+  - first:
+      213: -7043781665482437863
+    second: DyingIcon_119
+  - first:
+      213: 1186639209658000751
+    second: DyingIcon_120
+  - first:
+      213: -2543609013667929017
+    second: DyingIcon_121
+  - first:
+      213: 3459006421856811303
+    second: DyingIcon_122
+  - first:
+      213: 8221817202792742618
+    second: DyingIcon_123
+  - first:
+      213: 6934247299666064661
+    second: DyingIcon_124
+  - first:
+      213: 7558656190613284746
+    second: DyingIcon_125
+  - first:
+      213: 7255921695451769821
+    second: DyingIcon_126
+  - first:
+      213: -5308198872957873970
+    second: DyingIcon_127
+  - first:
+      213: 4311672347525468302
+    second: DyingIcon_128
+  - first:
+      213: -7469041119502189178
+    second: DyingIcon_129
+  - first:
+      213: 6774300575336389844
+    second: DyingIcon_130
+  - first:
+      213: 7721515236123219301
+    second: DyingIcon_131
+  - first:
+      213: -9134997040043535211
+    second: DyingIcon_132
+  - first:
+      213: -108794772070287130
+    second: DyingIcon_133
+  - first:
+      213: -6445926843003016188
+    second: DyingIcon_134
+  - first:
+      213: 2084177295215204051
+    second: DyingIcon_135
+  - first:
+      213: 7655682336189478448
+    second: DyingIcon_136
+  - first:
+      213: 2900741371307244993
+    second: DyingIcon_137
+  - first:
+      213: 4937557134927543296
+    second: DyingIcon_138
+  - first:
+      213: -5813696632378002877
+    second: DyingIcon_139
+  - first:
+      213: -6558121257761444693
+    second: DyingIcon_140
+  - first:
+      213: 8440757111653356660
+    second: DyingIcon_141
+  - first:
+      213: -8842521447649772518
+    second: DyingIcon_142
+  - first:
+      213: -3822026214612489952
+    second: DyingIcon_143
+  - first:
+      213: 5386049795706999852
+    second: DyingIcon_144
+  - first:
+      213: -3554130282417153832
+    second: DyingIcon_145
+  - first:
+      213: -4002352365365497961
+    second: DyingIcon_146
+  - first:
+      213: 2799351938905498722
+    second: DyingIcon_147
+  - first:
+      213: -3206890677416054536
+    second: DyingIcon_148
+  - first:
+      213: 5247290894219412338
+    second: DyingIcon_149
+  - first:
+      213: 4474811204923775234
+    second: DyingIcon_150
+  - first:
+      213: -6928534226150346685
+    second: DyingIcon_151
+  - first:
+      213: -7292847484716171193
+    second: DyingIcon_152
+  - first:
+      213: -5701534148892994007
+    second: DyingIcon_153
+  - first:
+      213: -1354655824314623327
+    second: DyingIcon_154
+  - first:
+      213: 5317415798582106527
+    second: DyingIcon_155
+  - first:
+      213: -759949719666462376
+    second: DyingIcon_156
+  - first:
+      213: -769261229725014178
+    second: DyingIcon_157
+  - first:
+      213: -331169195018519718
+    second: DyingIcon_158
+  - first:
+      213: -3800447031584896983
+    second: DyingIcon_159
+  - first:
+      213: -1864780438967993317
+    second: DyingIcon_160
+  - first:
+      213: 3305092309114547778
+    second: DyingIcon_161
+  - first:
+      213: -5325382959456595232
+    second: DyingIcon_162
+  - first:
+      213: -2407587103970596921
+    second: DyingIcon_163
+  - first:
+      213: 1337742127774294806
+    second: DyingIcon_164
+  - first:
+      213: 8898503110650887902
+    second: DyingIcon_165
+  - first:
+      213: 6106320459015133041
+    second: DyingIcon_166
+  - first:
+      213: 8478979772983239046
+    second: DyingIcon_167
+  - first:
+      213: -7963455269846060295
+    second: DyingIcon_168
+  - first:
+      213: 8084251752071942278
+    second: DyingIcon_169
+  - first:
+      213: -1960978133669448728
+    second: DyingIcon_170
+  - first:
+      213: -6731157166535107306
+    second: DyingIcon_171
+  - first:
+      213: -1408245133330930597
+    second: DyingIcon_172
+  - first:
+      213: 1064547633265548391
+    second: DyingIcon_173
+  - first:
+      213: -5434014591709122494
+    second: DyingIcon_174
+  - first:
+      213: 456244601601142684
+    second: DyingIcon_175
+  - first:
+      213: 9117058865772359106
+    second: DyingIcon_176
+  - first:
+      213: 4972863562813960559
+    second: DyingIcon_177
+  - first:
+      213: -7026000752541889265
+    second: DyingIcon_178
+  - first:
+      213: -424452911153938036
+    second: DyingIcon_179
+  - first:
+      213: 3946831244507815099
+    second: DyingIcon_180
+  - first:
+      213: 7502766553060603489
+    second: DyingIcon_181
+  - first:
+      213: -5978258381616717055
+    second: DyingIcon_182
+  - first:
+      213: 8698486099877530311
+    second: DyingIcon_183
+  - first:
+      213: 1806201051383077478
+    second: DyingIcon_184
+  - first:
+      213: 725345984441105255
+    second: DyingIcon_185
+  - first:
+      213: 2545464808061180985
+    second: DyingIcon_186
+  - first:
+      213: -7916061561155438357
+    second: DyingIcon_187
+  - first:
+      213: -621990852127155365
+    second: DyingIcon_188
+  - first:
+      213: 295279649035705792
+    second: DyingIcon_189
+  - first:
+      213: -1110186064549091195
+    second: DyingIcon_190
+  - first:
+      213: -6179989896489090301
+    second: DyingIcon_191
+  - first:
+      213: 316006020760583802
+    second: DyingIcon_192
+  - first:
+      213: 1052039094696913438
+    second: DyingIcon_193
+  - first:
+      213: 4508582963974546545
+    second: DyingIcon_194
+  - first:
+      213: 6812951402858411210
+    second: DyingIcon_195
+  - first:
+      213: -5882333443671302156
+    second: DyingIcon_196
+  - first:
+      213: -3474414211608511459
+    second: DyingIcon_197
+  - first:
+      213: 930637402061193614
+    second: DyingIcon_198
+  - first:
+      213: -74837519349464099
+    second: DyingIcon_199
+  - first:
+      213: -6918652085491727384
+    second: DyingIcon_200
+  - first:
+      213: 7947514734468655567
+    second: DyingIcon_201
+  - first:
+      213: 4353235013172698125
+    second: DyingIcon_202
+  - first:
+      213: 8899314189445648268
+    second: DyingIcon_203
+  - first:
+      213: 3891881404832001058
+    second: DyingIcon_204
+  - first:
+      213: -7720612525299059251
+    second: DyingIcon_205
+  - first:
+      213: -4769580951267242651
+    second: DyingIcon_206
+  - first:
+      213: 5414412415036358368
+    second: DyingIcon_207
+  - first:
+      213: 6458579278439757890
+    second: DyingIcon_208
+  - first:
+      213: 1317781719755215826
+    second: DyingIcon_209
+  - first:
+      213: -4166735616052730742
+    second: DyingIcon_210
+  - first:
+      213: -4584498356579424685
+    second: DyingIcon_211
+  - first:
+      213: 5144796054992109678
+    second: DyingIcon_212
+  - first:
+      213: 8701523170802326141
+    second: DyingIcon_213
+  - first:
+      213: -3985599622498275530
+    second: DyingIcon_214
+  - first:
+      213: -4330009431602687682
+    second: DyingIcon_215
+  - first:
+      213: -7752052158702157016
+    second: DyingIcon_216
+  - first:
+      213: 4503163999242027389
+    second: DyingIcon_217
+  - first:
+      213: 6337492130252513229
+    second: DyingIcon_218
+  - first:
+      213: 8683866545788878853
+    second: DyingIcon_219
+  - first:
+      213: 3145193565265754502
+    second: DyingIcon_220
+  - first:
+      213: -5593793353331381548
+    second: DyingIcon_221
+  - first:
+      213: -2646151437777875260
+    second: DyingIcon_222
+  - first:
+      213: 8294582317449291313
+    second: DyingIcon_223
+  - first:
+      213: -5469542527223907034
+    second: DyingIcon_224
+  - first:
+      213: -8898465578031047933
+    second: DyingIcon_225
+  - first:
+      213: -7988881468890180508
+    second: DyingIcon_226
+  - first:
+      213: 455202427251640055
+    second: DyingIcon_227
+  - first:
+      213: 2717102972897490712
+    second: DyingIcon_228
+  - first:
+      213: 7245671011004366673
+    second: DyingIcon_229
+  - first:
+      213: -2422959072867679032
+    second: DyingIcon_230
+  - first:
+      213: 2307101391811342006
+    second: DyingIcon_231
+  - first:
+      213: -1748446625249432797
+    second: DyingIcon_232
+  - first:
+      213: 3539158433889032325
+    second: DyingIcon_233
+  - first:
+      213: 824852020178717040
+    second: DyingIcon_234
+  - first:
+      213: -6757695501486806386
+    second: DyingIcon_235
+  - first:
+      213: 7723540221560002366
+    second: DyingIcon_236
+  - first:
+      213: -5858842551846612814
+    second: DyingIcon_237
+  - first:
+      213: -8056848637535468637
+    second: DyingIcon_238
+  - first:
+      213: 5512594628345163256
+    second: DyingIcon_239
+  - first:
+      213: 5571226886645553702
+    second: DyingIcon_240
+  - first:
+      213: 3333486349110377704
+    second: DyingIcon_241
+  - first:
+      213: 8843366675045737426
+    second: DyingIcon_242
+  - first:
+      213: 1170091662740555945
+    second: DyingIcon_243
+  - first:
+      213: 8375521463668726285
+    second: DyingIcon_244
+  - first:
+      213: -4943312861920221549
+    second: DyingIcon_245
+  - first:
+      213: 4815998472657417974
+    second: DyingIcon_246
+  - first:
+      213: -8581492867112877593
+    second: DyingIcon_247
+  - first:
+      213: 875403441415496946
+    second: DyingIcon_248
+  - first:
+      213: 6744251301644436881
+    second: DyingIcon_249
+  - first:
+      213: 8504236557168428480
+    second: DyingIcon_250
+  - first:
+      213: -2156903402634621661
+    second: DyingIcon_251
+  - first:
+      213: -8922059542823435578
+    second: DyingIcon_252
+  - first:
+      213: 4090677358576189373
+    second: DyingIcon_253
+  - first:
+      213: -7829972086418899544
+    second: DyingIcon_254
+  - first:
+      213: 6837416876810279057
+    second: DyingIcon_255
+  - first:
+      213: 292061828671884397
+    second: DyingIcon_256
+  - first:
+      213: -884400426481618994
+    second: DyingIcon_257
+  - first:
+      213: -710682296214535
+    second: DyingIcon_258
+  - first:
+      213: -5052553366077075697
+    second: DyingIcon_259
+  - first:
+      213: -6963336892625296996
+    second: DyingIcon_260
+  - first:
+      213: 4437457882267273673
+    second: DyingIcon_261
+  - first:
+      213: -7427555401657671935
+    second: DyingIcon_262
+  - first:
+      213: -3332598096690815037
+    second: DyingIcon_263
+  - first:
+      213: 5460724676751664780
+    second: DyingIcon_264
+  - first:
+      213: -3726146076664196328
+    second: DyingIcon_265
+  - first:
+      213: 4020086137834447575
+    second: DyingIcon_266
+  - first:
+      213: 1632921086106858438
+    second: DyingIcon_267
+  - first:
+      213: 3272599614418886663
+    second: DyingIcon_268
+  - first:
+      213: 806205157738258108
+    second: DyingIcon_269
+  - first:
+      213: 3199624903077357482
+    second: DyingIcon_270
+  - first:
+      213: 8189689508063284671
+    second: DyingIcon_271
+  - first:
+      213: 3817785047376943000
+    second: DyingIcon_272
+  - first:
+      213: -3121182122193054374
+    second: DyingIcon_273
+  - first:
+      213: 5031522242653805375
+    second: DyingIcon_274
+  - first:
+      213: -3445818946263400341
+    second: DyingIcon_275
+  - first:
+      213: 7403575174294729389
+    second: DyingIcon_276
+  - first:
+      213: -3364609216581010263
+    second: DyingIcon_277
+  - first:
+      213: -8288182733786053757
+    second: DyingIcon_278
+  - first:
+      213: -5279906589441405003
+    second: DyingIcon_279
+  - first:
+      213: 4266813680618764425
+    second: DyingIcon_280
+  - first:
+      213: -273020604100713546
+    second: DyingIcon_281
+  - first:
+      213: 8582039088546404592
+    second: DyingIcon_282
+  - first:
+      213: 1845657366587899311
+    second: DyingIcon_283
+  - first:
+      213: -109655003434139491
+    second: DyingIcon_284
+  - first:
+      213: 5319486360919459507
+    second: DyingIcon_285
+  - first:
+      213: 5089967995985748793
+    second: DyingIcon_286
+  - first:
+      213: -8930048087276949384
+    second: DyingIcon_287
+  - first:
+      213: 714387835692580344
+    second: DyingIcon_288
+  - first:
+      213: -90451434595697066
+    second: DyingIcon_289
+  - first:
+      213: -7698951038255300690
+    second: DyingIcon_290
+  - first:
+      213: 1424679502193727863
+    second: DyingIcon_291
+  - first:
+      213: -5230093664958413949
+    second: DyingIcon_292
+  - first:
+      213: 1107088613611083864
+    second: DyingIcon_293
+  - first:
+      213: -7213384221524106859
+    second: DyingIcon_294
+  - first:
+      213: -3147881955551898587
+    second: DyingIcon_295
+  - first:
+      213: 8414482422059942796
+    second: DyingIcon_296
+  - first:
+      213: 8352122444667323716
+    second: DyingIcon_297
+  - first:
+      213: 773267799612062942
+    second: DyingIcon_298
+  - first:
+      213: -2488463406136876340
+    second: DyingIcon_299
+  - first:
+      213: 5627786199100390124
+    second: DyingIcon_300
+  - first:
+      213: 7304540619507040080
+    second: DyingIcon_301
+  - first:
+      213: 6762704797074574672
+    second: DyingIcon_302
+  - first:
+      213: 4374178376014487456
+    second: DyingIcon_303
+  - first:
+      213: 417019426882963722
+    second: DyingIcon_304
+  - first:
+      213: 2580271984090835314
+    second: DyingIcon_305
+  - first:
+      213: 1222838794950101480
+    second: DyingIcon_306
+  - first:
+      213: -8460590357446860531
+    second: DyingIcon_307
+  - first:
+      213: -6918305686695723610
+    second: DyingIcon_308
+  - first:
+      213: 423299612763689436
+    second: DyingIcon_309
+  - first:
+      213: 4040770590895034193
+    second: DyingIcon_310
+  - first:
+      213: -3790298525841068584
+    second: DyingIcon_311
+  - first:
+      213: -3633754221892832042
+    second: DyingIcon_312
+  - first:
+      213: 8477624154688338854
+    second: DyingIcon_313
+  - first:
+      213: 7849180667442233823
+    second: DyingIcon_314
+  - first:
+      213: 5512764262666204404
+    second: DyingIcon_315
+  - first:
+      213: -459375829502349550
+    second: DyingIcon_316
+  - first:
+      213: 6646289490737941434
+    second: DyingIcon_317
+  - first:
+      213: 8745033347211061532
+    second: DyingIcon_318
+  - first:
+      213: 4835127784579145168
+    second: DyingIcon_319
+  - first:
+      213: 8430145998711588919
+    second: DyingIcon_320
+  - first:
+      213: -1587893875945990233
+    second: DyingIcon_321
+  - first:
+      213: -5002785810459645389
+    second: DyingIcon_322
+  - first:
+      213: -375702232199586690
+    second: DyingIcon_323
+  - first:
+      213: 7191320556594371811
+    second: DyingIcon_324
+  - first:
+      213: 3274119636864096813
+    second: DyingIcon_325
+  - first:
+      213: 1177673061863832697
+    second: DyingIcon_326
+  - first:
+      213: -7658693255617523128
+    second: DyingIcon_327
+  - first:
+      213: 8682784806117657883
+    second: DyingIcon_328
+  - first:
+      213: -8788976414690188425
+    second: DyingIcon_329
+  - first:
+      213: 7455622831512503568
+    second: DyingIcon_330
+  - first:
+      213: -2802942974006773606
+    second: DyingIcon_331
+  - first:
+      213: -5771262634597665505
+    second: DyingIcon_332
+  - first:
+      213: 7745701410359403152
+    second: DyingIcon_333
+  - first:
+      213: -8428277350711583118
+    second: DyingIcon_334
+  - first:
+      213: 2631817457794400894
+    second: DyingIcon_335
+  - first:
+      213: 1224606156849907680
+    second: DyingIcon_336
+  - first:
+      213: 5922380857547596329
+    second: DyingIcon_337
+  - first:
+      213: -6731272996985797384
+    second: DyingIcon_338
+  - first:
+      213: 8881069352896612233
+    second: DyingIcon_339
+  - first:
+      213: -2176435344063339507
+    second: DyingIcon_340
+  - first:
+      213: -1466022107438997821
+    second: DyingIcon_341
+  - first:
+      213: 7692060794726487394
+    second: DyingIcon_342
+  - first:
+      213: 8055702014242286234
+    second: DyingIcon_343
+  - first:
+      213: 7228241513655688366
+    second: DyingIcon_344
+  - first:
+      213: -5543978670183311714
+    second: DyingIcon_345
+  - first:
+      213: -4802546534533873935
+    second: DyingIcon_346
+  - first:
+      213: 5368718111341825856
+    second: DyingIcon_347
+  - first:
+      213: -4571155728289292580
+    second: DyingIcon_348
+  - first:
+      213: 6701454597779985788
+    second: DyingIcon_349
+  - first:
+      213: -8434661163858041143
+    second: DyingIcon_350
+  - first:
+      213: 7041825467037989360
+    second: DyingIcon_351
+  - first:
+      213: -1309988124586194075
+    second: DyingIcon_352
+  - first:
+      213: 7181936857791178215
+    second: DyingIcon_353
+  - first:
+      213: -1121842908087898670
+    second: DyingIcon_354
+  - first:
+      213: 5230708601472895255
+    second: DyingIcon_355
+  - first:
+      213: 350492552867173804
+    second: DyingIcon_356
+  - first:
+      213: -2514811189449261310
+    second: DyingIcon_357
+  - first:
+      213: 1159476945830772730
+    second: DyingIcon_358
+  - first:
+      213: -3077152833527613315
+    second: DyingIcon_359
+  - first:
+      213: 8759805151995415190
+    second: DyingIcon_360
+  - first:
+      213: -4696474947897671191
+    second: DyingIcon_361
+  - first:
+      213: 7370762138552501587
+    second: DyingIcon_362
+  - first:
+      213: -6445697536608497591
+    second: DyingIcon_363
+  - first:
+      213: 6201809888952309358
+    second: DyingIcon_364
+  - first:
+      213: -2940884052210603540
+    second: DyingIcon_365
+  - first:
+      213: -4263622169239861837
+    second: DyingIcon_366
+  - first:
+      213: 298268220800058767
+    second: DyingIcon_367
+  - first:
+      213: 2646176501942989401
+    second: DyingIcon_368
+  - first:
+      213: -325206125390419600
+    second: DyingIcon_369
+  - first:
+      213: 7101193085620658706
+    second: DyingIcon_370
+  - first:
+      213: 241394619078548085
+    second: DyingIcon_371
+  - first:
+      213: -8631600062718294610
+    second: DyingIcon_372
+  - first:
+      213: -8360408566447185746
+    second: DyingIcon_373
+  - first:
+      213: -6749330504228991966
+    second: DyingIcon_374
+  - first:
+      213: 374674534871139642
+    second: DyingIcon_375
+  - first:
+      213: 7815456572874229457
+    second: DyingIcon_376
+  - first:
+      213: 8280642558766753482
+    second: DyingIcon_377
+  - first:
+      213: 2087886112633797155
+    second: DyingIcon_378
+  - first:
+      213: -1272594971049582535
+    second: DyingIcon_379
+  - first:
+      213: -3852872070646868183
+    second: DyingIcon_380
+  - first:
+      213: 2372282252151861781
+    second: DyingIcon_381
+  - first:
+      213: -6843153084542351001
+    second: DyingIcon_382
+  - first:
+      213: 1404211395107392292
+    second: DyingIcon_383
+  - first:
+      213: 3088385732910975758
+    second: DyingIcon_384
+  - first:
+      213: -9133895867308843115
+    second: DyingIcon_385
+  - first:
+      213: 8336490435833517118
+    second: DyingIcon_386
+  - first:
+      213: -4751167561579915832
+    second: DyingIcon_387
+  - first:
+      213: 6572396064197728060
+    second: DyingIcon_388
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DyingIcon_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04fe25d4070481480800000000000000
+      internalID: -8928315410184212672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 6300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 136cfd2cb37833db0800000000000000
+      internalID: -4813354885986662863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 6300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30660bda186977d90800000000000000
+      internalID: -7100040803817331197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 6300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f53df8fdc596a00800000000000000
+      internalID: 750232928194354963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_4
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 6300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff2d02f1b4fb4ea0800000000000000
+      internalID: -5887343042749452301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6be72d30fabb290800000000000000
+      internalID: -7873507092575897903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_6
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 6150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a34125545c141af0800000000000000
+      internalID: -426684916162280535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_7
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 6150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7bc0ea75e867bd50800000000000000
+      internalID: 6752981501083700095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_8
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 6150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 279dd7a71b1368a00800000000000000
+      internalID: 758348225592547698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_9
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 6150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c65ab61d610d98f0800000000000000
+      internalID: -532267612915476800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71deb68383e6b2420800000000000000
+      internalID: 2606297997107784983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_11
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 6000
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea6941dc7d226dcf0800000000000000
+      internalID: -227956420881639762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_12
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 6000
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cad3f832e814c2c0800000000000000
+      internalID: -4412374375019062592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_13
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 6000
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf9f2492e5d103d20800000000000000
+      internalID: 3256134820845255164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 6000
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019742d5c9b7db740800000000000000
+      internalID: 5169423858798983440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5850
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 546a63db08094b1f0800000000000000
+      internalID: -1030039532156311995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_16
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 5850
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 209d62e001227e920800000000000000
+      internalID: 3019419527527454978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_17
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 5850
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbc3671278402100800000000000000
+      internalID: 81144448148556744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_18
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 5850
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea677fa4dc5695a0800000000000000
+      internalID: -6514917742398182681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_19
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5850
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24128c98718456bd0800000000000000
+      internalID: -2637622740822515390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5700
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c695af07b2bbeea60800000000000000
+      internalID: 7705301807730940268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_21
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 5700
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ec0e32cdf15b8d0800000000000000
+      internalID: -2831321760377287146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_22
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 5700
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35cc3e79c60f8d3e0800000000000000
+      internalID: -2028607282934985645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_23
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 5700
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62c1be2305fa868f0800000000000000
+      internalID: -546994595739001818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_24
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5700
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef0535b779b1b8a30800000000000000
+      internalID: 4218495813385670910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5550
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e78a0ef497f993f0800000000000000
+      internalID: -893410831767009311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_26
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 5550
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a65e3fee81205b60800000000000000
+      internalID: 7732717457978054312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_27
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 5550
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f551bb466efaeca0800000000000000
+      internalID: -5986693039325620745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_28
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 5550
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 207c29b20ab0aa040800000000000000
+      internalID: 4659549547021911810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_29
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5550
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba69855bd50e43d0800000000000000
+      internalID: -3220630243932280138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5400
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a2f02ba3e78bf690800000000000000
+      internalID: -7567305336967597402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_31
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 5400
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e15d9949b569c830800000000000000
+      internalID: 4091913582921208294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_32
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 5400
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8293ca626bb23b60800000000000000
+      internalID: 7724442342266213006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_33
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 5400
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a6aebd69fbdd2630800000000000000
+      internalID: 3904018316334638758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_34
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5400
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a63f2a1eaccd690800000000000000
+      internalID: -7575957402693703130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5250
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23d1087c19aa3e850800000000000000
+      internalID: 6405150638145019186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_36
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 5250
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9adc13e509d7d430800000000000000
+      internalID: 3807750629273426590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_37
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 5250
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2a088d84856d2f40800000000000000
+      internalID: 5705327922932877870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_38
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 5250
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f509dfcb940258120800000000000000
+      internalID: 2415372276229574751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_39
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5250
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b522317312843bd0800000000000000
+      internalID: -2651351260599278156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5100
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8637776f2cd33870800000000000000
+      internalID: 8661508604521035403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_41
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 5100
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49affab3250e3f30800000000000000
+      internalID: 4557085523964832079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_42
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 5100
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a169964de9f26140800000000000000
+      internalID: 4711602957669982632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_43
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 5100
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b28fd11f1570810800000000000000
+      internalID: 1731442677779016531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_44
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5100
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dd9a20c4ef985140800000000000000
+      internalID: 4708689215241231833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4950
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d950873f9aa8d60800000000000000
+      internalID: 7893308160075996562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_46
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 4950
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7138a1d2c02f0d0800000000000000
+      internalID: -3390634181598701632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_47
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 4950
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bce8e6faac18a93c0800000000000000
+      internalID: -4352023382373527861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_48
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 4950
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a767067e01425ba0800000000000000
+      internalID: -6101743014768056409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_49
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4950
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2af444754fb2a8e0800000000000000
+      internalID: -1683573005658818002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4800
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f44a52daf54714140800000000000000
+      internalID: 4702167440227148879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_51
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 4800
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2fdfd09cc3745700800000000000000
+      internalID: 528174378750304044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_52
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 4800
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565195f0f34120de0800000000000000
+      internalID: -1368509075694217883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_53
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 4800
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689c81d8635d574c0800000000000000
+      internalID: -4290288639728367226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_54
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4800
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d025bac3a21f6d10800000000000000
+      internalID: 2120934444204630228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4650
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de499ba82618fd7f0800000000000000
+      internalID: -585607166300678931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_56
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 4650
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0328a2b78f6288bb0800000000000000
+      internalID: -4933650543124250064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_57
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 4650
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b0babdc11647550800000000000000
+      internalID: 6157653367094709120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_58
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 4650
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ad8cfdfca943360800000000000000
+      internalID: 7148508726147209798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_59
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4650
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 672f5d6ea94993dd0800000000000000
+      internalID: -2505808324636315018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4500
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9246ea8817103b1e0800000000000000
+      internalID: -2183399807208496087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_61
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 4500
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0cbadf8387f6e40800000000000000
+      internalID: 5651868243542655198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_62
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 4500
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b06662ee9444a110800000000000000
+      internalID: 1271216444019204277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_63
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 4500
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba77b2578e4826200800000000000000
+      internalID: 171845869726562219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_64
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4500
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e453ad21ce330b0800000000000000
+      internalID: -5749992733507498492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4350
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 827869b18b3444d50800000000000000
+      internalID: 6720571001959515944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_66
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 4350
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d61a640047443300800000000000000
+      internalID: 230887821180278481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_67
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 4350
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: febabe7c532945ed0800000000000000
+      internalID: -2426153539560821777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_68
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 4350
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c3d5f537a98c000800000000000000
+      internalID: 56464815653993497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_69
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4350
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9190176b1dceeebc0800000000000000
+      internalID: -3751801054099863271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4200
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a097c7e8a61e074c0800000000000000
+      internalID: -4291682597110777590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_71
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 4200
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41308eb19202721b0800000000000000
+      internalID: -5681537043970653420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_72
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 4200
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9198e9452630370800000000000000
+      internalID: 8287575854868404652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_73
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 4200
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14e10e1ba1143520800000000000000
+      internalID: 2680787104832807962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_74
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4200
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d66332a4e2563b560800000000000000
+      internalID: 7328312268148651629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4050
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6502abccfb0f6ecd0800000000000000
+      internalID: -2529069434157785002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_76
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 4050
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f96c73fe0ec8fce0800000000000000
+      internalID: -1371119522924434952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_77
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 4050
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee0bd356da7a6520800000000000000
+      internalID: 2696102387883118309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_78
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 4050
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 209fb61b0aa3f6b50800000000000000
+      internalID: 6588549241712146690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_79
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4050
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c8e592def61cf80800000000000000
+      internalID: -8088060391388705719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3900
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc42a4e2f9ff664d0800000000000000
+      internalID: -3141542630902848305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_81
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 3900
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4078c2d7fb534e5c0800000000000000
+      internalID: -4187162656992622844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_82
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 3900
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77febbdf77f6d2f20800000000000000
+      internalID: 3399495854883336055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_83
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 3900
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d5920ce5aece13b0800000000000000
+      internalID: -5539763279594613292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_84
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3900
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62c079f7c9c6e8120800000000000000
+      internalID: 2417989469355838502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3750
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 958484d8fd1c05100800000000000000
+      internalID: 94788758066972761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_86
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 3750
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ea89f505ca95de0800000000000000
+      internalID: -1343853552592179691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_87
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 3750
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c87391709359b70800000000000000
+      internalID: 8905086540845648947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_88
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 3750
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd1bda9f74cab340800000000000000
+      internalID: 4880429198547295736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_89
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3750
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574f798f51f76d870800000000000000
+      internalID: 8707286661909181557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5087888c28740ab00800000000000000
+      internalID: 837748157726619653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_91
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 3600
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e6b0dfd7c337220800000000000000
+      internalID: 2482394331425238606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_92
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 3600
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65e69b86bdee7b4a0800000000000000
+      internalID: -6577526104629088682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_93
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 3600
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d898b55f7da5c3950800000000000000
+      internalID: 6430114251559111053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_94
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3600
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c6ed4cb89c602cf0800000000000000
+      internalID: -279103773646919992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3450
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dba4b856f4b55ea30800000000000000
+      internalID: 4243898620430731965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_96
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 3450
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8213ac4f160b3e3c0800000000000000
+      internalID: -4331424481835077336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_97
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 3450
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6d7b5d7fa12f990800000000000000
+      internalID: -7353785589797759252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_98
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 3450
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833b14a25b75e2040800000000000000
+      internalID: 4624730302965723960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_99
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3450
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17e6d17684a2e0400800000000000000
+      internalID: 292217516281654897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd5d3336db3c45530800000000000000
+      internalID: 3842911600234452445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_101
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 3300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a852133ed16ef990800000000000000
+      internalID: -7350329934854596443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_102
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 3300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc2092ec3f4b5d40800000000000000
+      internalID: 5574136086718852351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_103
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 3300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a973953108060e80800000000000000
+      internalID: -8212868069176673887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_104
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e28df94f092c070800000000000000
+      internalID: 8125216058057960980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3dd6fd7994e6700800000000000000
+      internalID: 535446322341073859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_106
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 3150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd3b176420dbaf80800000000000000
+      internalID: -8094147050501096003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_107
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 3150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1e42d9494b5706a0800000000000000
+      internalID: -6483112768247280102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_108
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 3150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b78336a2df9d09c00800000000000000
+      internalID: 905463206462568571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_109
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd6c3711a9332eda0800000000000000
+      internalID: -5917110223600630051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e9160ec90a519990800000000000000
+      internalID: -7381019316125820440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_111
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 3000
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca0ce02a417ea440800000000000000
+      internalID: 4949017603720612551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_112
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 3000
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb8f97833ca2f0a00800000000000000
+      internalID: 724845082984446139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_113
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 3000
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70261f52f731d3000800000000000000
+      internalID: 17191410397700615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_114
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3000
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf3c6826e2b68bfa0800000000000000
+      internalID: -5784755874391735300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_115
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2850
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c26fc4275e7162c0800000000000000
+      internalID: -4440128844865772860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_116
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 2850
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4392d850b70323db0800000000000000
+      internalID: -4813731746773391052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_117
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2850
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3335119da4e2ac0800000000000000
+      internalID: -3878079932960394322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_118
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2850
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89a55b0cc2410e4c0800000000000000
+      internalID: -4260383065048261992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_119
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2850
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91b828115e57f3e90800000000000000
+      internalID: -7043781665482437863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2700
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f652738f21ac77010800000000000000
+      internalID: 1186639209658000751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_121
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 2700
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74467d4241943bcd0800000000000000
+      internalID: -2543609013667929017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_122
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2700
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 729f19a930cd00030800000000000000
+      internalID: 3459006421856811303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_123
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2700
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade38a45f23c91270800000000000000
+      internalID: 8221817202792742618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_124
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2700
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 515be490e256b3060800000000000000
+      internalID: 6934247299666064661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_125
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2550
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a87efc402cdb5e860800000000000000
+      internalID: 7558656190613284746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_126
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 2550
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddbe377a65632b460800000000000000
+      internalID: 7255921695451769821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_127
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2550
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec09734cf3d7556b0800000000000000
+      internalID: -5308198872957873970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_128
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2550
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e805126e72326db30800000000000000
+      internalID: 4311672347525468302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_129
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2550
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68d394baca2a85890800000000000000
+      internalID: -7469041119502189178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dc56a24b76230e50800000000000000
+      internalID: 6774300575336389844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_131
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 2400
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56514e86235582b60800000000000000
+      internalID: 7721515236123219301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_132
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2400
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 594d5f36798f93180800000000000000
+      internalID: -9134997040043535211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_133
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2400
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e8b4513bbb7d7ef0800000000000000
+      internalID: -108794772070287130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_134
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2400
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40c66a230b77b86a0800000000000000
+      internalID: -6445926843003016188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_135
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2250
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d69c32253c7cec10800000000000000
+      internalID: 2084177295215204051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_136
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 2250
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0367ec1f5827e3a60800000000000000
+      internalID: 7655682336189478448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_137
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2250
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cd3c0e88e0814820800000000000000
+      internalID: 2900741371307244993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_138
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2250
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c3d8dcd0ab58440800000000000000
+      internalID: 4937557134927543296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_139
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2250
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 342793317b9915fa0800000000000000
+      internalID: -5813696632378002877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2100
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bace035667fdcf4a0800000000000000
+      internalID: -6558121257761444693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_141
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 2100
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 474537b3fd7932570800000000000000
+      internalID: 8440757111653356660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_142
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2100
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1cff02d79d094580800000000000000
+      internalID: -8842521447649772518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_143
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2100
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 029aac3686f65fac0800000000000000
+      internalID: -3822026214612489952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_144
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2100
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c245eafa0c71fba40800000000000000
+      internalID: 5386049795706999852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_145
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1950
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d81117b6513daec0800000000000000
+      internalID: -3554130282417153832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_146
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1950
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79fe174aab9c478c0800000000000000
+      internalID: -4002352365365497961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_147
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1950
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26463cfb1cb49d620800000000000000
+      internalID: 2799351938905498722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_148
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1950
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f0ba137be5de73d0800000000000000
+      internalID: -3206890677416054536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_149
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1950
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2730717544f12d840800000000000000
+      internalID: 5247290894219412338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_150
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2095b621519b91e30800000000000000
+      internalID: 4474811204923775234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_151
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1800
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3403c2c84d6e8df90800000000000000
+      internalID: -6928534226150346685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_152
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1800
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74044601ad99aca90800000000000000
+      internalID: -7292847484716171193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_153
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1800
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 926597c46e410e0b0800000000000000
+      internalID: -5701534148892994007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_154
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1800
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa10de74bb433de0800000000000000
+      internalID: -1354655824314623327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_155
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1650
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f995985fe714bc940800000000000000
+      internalID: 5317415798582106527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_156
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1650
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8517f10a1cd1475f0800000000000000
+      internalID: -759949719666462376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_157
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1650
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57a2cebcf80355f0800000000000000
+      internalID: -769261229725014178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_158
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1650
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b7e5a2f53776bf0800000000000000
+      internalID: -331169195018519718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_159
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1650
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928c1b67f89124bc0800000000000000
+      internalID: -3800447031584896983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c373f1218fe16e0800000000000000
+      internalID: -1864780438967993317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_161
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1500
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24ee5aaa1fb0edd20800000000000000
+      internalID: 3305092309114547778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_162
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1500
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2dba8d9607816b0800000000000000
+      internalID: -5325382959456595232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_163
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1500
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c7650ee848869ed0800000000000000
+      internalID: -2407587103970596921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_164
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1500
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 613ef07a06d909210800000000000000
+      internalID: 1337742127774294806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_165
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1350
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edefd0fce65dd7b70800000000000000
+      internalID: 8898503110650887902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_166
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1350
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1771c44da120eb450800000000000000
+      internalID: 6106320459015133041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_167
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1350
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68163621e236ba570800000000000000
+      internalID: 8478979772983239046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_168
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1350
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2fc10df9f1c7190800000000000000
+      internalID: -7963455269846060295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_169
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1350
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680d315e228013070800000000000000
+      internalID: 8084251752071942278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_170
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e3f252f6c439c4e0800000000000000
+      internalID: -1960978133669448728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_171
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1200
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d995168302692a0800000000000000
+      internalID: -6731157166535107306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_172
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1200
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b54232f2388e47ce0800000000000000
+      internalID: -1408245133330930597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_173
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1200
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c9647ae6806ce00800000000000000
+      internalID: 1064547633265548391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_174
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1200
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24073ecf4808694b0800000000000000
+      internalID: -5434014591709122494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_175
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1050
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f20214c08e45600800000000000000
+      internalID: 456244601601142684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_176
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1050
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cdefa2fbbc468e70800000000000000
+      internalID: 9117058865772359106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_177
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1050
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6172022019230540800000000000000
+      internalID: 4972863562813960559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_178
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1050
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d0d197a81ae7e90800000000000000
+      internalID: -7026000752541889265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_179
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1050
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c810ace735a0c1af0800000000000000
+      internalID: -424452911153938036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbc1d4d0b16f5c630800000000000000
+      internalID: 3946831244507815099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_181
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 900
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 166fbdbbd6e2f1860800000000000000
+      internalID: 7502766553060603489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_182
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 900
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103eb341da5f80da0800000000000000
+      internalID: -5978258381616717055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_183
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 900
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca8fd2750b37b870800000000000000
+      internalID: 8698486099877530311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_184
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 900
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66a10ac594ae01910800000000000000
+      internalID: 1806201051383077478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_185
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76b3edd6452f01a00800000000000000
+      internalID: 725345984441105255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_186
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 750
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c9eb8a1ce435320800000000000000
+      internalID: 2545464808061180985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_187
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 750
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8b43383ff742290800000000000000
+      internalID: -7916061561155438357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_188
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 750
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b1b6d8d9e3e57f0800000000000000
+      internalID: -621990852127155365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_189
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 750
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cddc2eb64b091400800000000000000
+      internalID: 295279649035705792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_190
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58866f308a3d790f0800000000000000
+      internalID: -1110186064549091195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_191
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 600
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303c340aee34c3aa0800000000000000
+      internalID: -6179989896489090301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_192
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 600
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7eb1563dcda26400800000000000000
+      internalID: 316006020760583802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_193
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 600
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1aab319bf7999e00800000000000000
+      internalID: 1052039094696913438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_194
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 600
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174a4187154b19e30800000000000000
+      internalID: 4508582963974546545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_195
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac4ff5f44377c8e50800000000000000
+      internalID: 6812951402858411210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_196
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 450
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ff529f16e0cd5ea0800000000000000
+      internalID: -5882333443671302156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_197
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 450
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c718acea668cfc0800000000000000
+      internalID: -3474414211608511459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_198
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 450
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81cc8459c94aec00800000000000000
+      internalID: 930637402061193614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_199
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 450
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd3cd433caf16fef0800000000000000
+      internalID: -74837519349464099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_200
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e300c7b5920cff90800000000000000
+      internalID: -6918652085491727384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_201
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9ef231b8e3b4e60800000000000000
+      internalID: 7947514734468655567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_202
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c93f71e2cc96c30800000000000000
+      internalID: 4353235013172698125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_203
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8f408eca17b08b70800000000000000
+      internalID: 8899314189445648268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_204
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ca5f2848db20630800000000000000
+      internalID: 3891881404832001058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_205
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc53e1550dfdad490800000000000000
+      internalID: -7720612525299059251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_206
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56d0f38256b0fcdb0800000000000000
+      internalID: -4769580951267242651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_207
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eef4b9976bd32b40800000000000000
+      internalID: 5414412415036358368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_208
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 248b91d72ab71a950800000000000000
+      internalID: 6458579278439757890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_209
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d353810e73b94210800000000000000
+      internalID: 1317781719755215826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_210
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8465349808cc26c0800000000000000
+      internalID: -4166735616052730742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_211
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356a8bec8079060c0800000000000000
+      internalID: -4584498356579424685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DyingIcon_212
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e60c2a3f0ccf56740800000000000000
+      internalID: 5144796054992109678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d8241206c03cc804eb02187f799c021a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":150.0,"y":150.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":1,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      DyingIcon_0: -8928315410184212672
+      DyingIcon_1: -4813354885986662863
+      DyingIcon_10: 2606297997107784983
+      DyingIcon_100: 3842911600234452445
+      DyingIcon_101: -7350329934854596443
+      DyingIcon_102: 5574136086718852351
+      DyingIcon_103: -8212868069176673887
+      DyingIcon_104: 8125216058057960980
+      DyingIcon_105: 535446322341073859
+      DyingIcon_106: -8094147050501096003
+      DyingIcon_107: -6483112768247280102
+      DyingIcon_108: 905463206462568571
+      DyingIcon_109: -5917110223600630051
+      DyingIcon_11: -227956420881639762
+      DyingIcon_110: -7381019316125820440
+      DyingIcon_111: 4949017603720612551
+      DyingIcon_112: 724845082984446139
+      DyingIcon_113: 17191410397700615
+      DyingIcon_114: -5784755874391735300
+      DyingIcon_115: -4440128844865772860
+      DyingIcon_116: -4813731746773391052
+      DyingIcon_117: -3878079932960394322
+      DyingIcon_118: -4260383065048261992
+      DyingIcon_119: -7043781665482437863
+      DyingIcon_12: -4412374375019062592
+      DyingIcon_120: 1186639209658000751
+      DyingIcon_121: -2543609013667929017
+      DyingIcon_122: 3459006421856811303
+      DyingIcon_123: 8221817202792742618
+      DyingIcon_124: 6934247299666064661
+      DyingIcon_125: 7558656190613284746
+      DyingIcon_126: 7255921695451769821
+      DyingIcon_127: -5308198872957873970
+      DyingIcon_128: 4311672347525468302
+      DyingIcon_129: -7469041119502189178
+      DyingIcon_13: 3256134820845255164
+      DyingIcon_130: 6774300575336389844
+      DyingIcon_131: 7721515236123219301
+      DyingIcon_132: -9134997040043535211
+      DyingIcon_133: -108794772070287130
+      DyingIcon_134: -6445926843003016188
+      DyingIcon_135: 2084177295215204051
+      DyingIcon_136: 7655682336189478448
+      DyingIcon_137: 2900741371307244993
+      DyingIcon_138: 4937557134927543296
+      DyingIcon_139: -5813696632378002877
+      DyingIcon_14: 5169423858798983440
+      DyingIcon_140: -6558121257761444693
+      DyingIcon_141: 8440757111653356660
+      DyingIcon_142: -8842521447649772518
+      DyingIcon_143: -3822026214612489952
+      DyingIcon_144: 5386049795706999852
+      DyingIcon_145: -3554130282417153832
+      DyingIcon_146: -4002352365365497961
+      DyingIcon_147: 2799351938905498722
+      DyingIcon_148: -3206890677416054536
+      DyingIcon_149: 5247290894219412338
+      DyingIcon_15: -1030039532156311995
+      DyingIcon_150: 4474811204923775234
+      DyingIcon_151: -6928534226150346685
+      DyingIcon_152: -7292847484716171193
+      DyingIcon_153: -5701534148892994007
+      DyingIcon_154: -1354655824314623327
+      DyingIcon_155: 5317415798582106527
+      DyingIcon_156: -759949719666462376
+      DyingIcon_157: -769261229725014178
+      DyingIcon_158: -331169195018519718
+      DyingIcon_159: -3800447031584896983
+      DyingIcon_16: 3019419527527454978
+      DyingIcon_160: -1864780438967993317
+      DyingIcon_161: 3305092309114547778
+      DyingIcon_162: -5325382959456595232
+      DyingIcon_163: -2407587103970596921
+      DyingIcon_164: 1337742127774294806
+      DyingIcon_165: 8898503110650887902
+      DyingIcon_166: 6106320459015133041
+      DyingIcon_167: 8478979772983239046
+      DyingIcon_168: -7963455269846060295
+      DyingIcon_169: 8084251752071942278
+      DyingIcon_17: 81144448148556744
+      DyingIcon_170: -1960978133669448728
+      DyingIcon_171: -6731157166535107306
+      DyingIcon_172: -1408245133330930597
+      DyingIcon_173: 1064547633265548391
+      DyingIcon_174: -5434014591709122494
+      DyingIcon_175: 456244601601142684
+      DyingIcon_176: 9117058865772359106
+      DyingIcon_177: 4972863562813960559
+      DyingIcon_178: -7026000752541889265
+      DyingIcon_179: -424452911153938036
+      DyingIcon_18: -6514917742398182681
+      DyingIcon_180: 3946831244507815099
+      DyingIcon_181: 7502766553060603489
+      DyingIcon_182: -5978258381616717055
+      DyingIcon_183: 8698486099877530311
+      DyingIcon_184: 1806201051383077478
+      DyingIcon_185: 725345984441105255
+      DyingIcon_186: 2545464808061180985
+      DyingIcon_187: -7916061561155438357
+      DyingIcon_188: -621990852127155365
+      DyingIcon_189: 295279649035705792
+      DyingIcon_19: -2637622740822515390
+      DyingIcon_190: -1110186064549091195
+      DyingIcon_191: -6179989896489090301
+      DyingIcon_192: 316006020760583802
+      DyingIcon_193: 1052039094696913438
+      DyingIcon_194: 4508582963974546545
+      DyingIcon_195: 6812951402858411210
+      DyingIcon_196: -5882333443671302156
+      DyingIcon_197: -3474414211608511459
+      DyingIcon_198: 930637402061193614
+      DyingIcon_199: -74837519349464099
+      DyingIcon_2: -7100040803817331197
+      DyingIcon_20: 7705301807730940268
+      DyingIcon_200: -6918652085491727384
+      DyingIcon_201: 7947514734468655567
+      DyingIcon_202: 4353235013172698125
+      DyingIcon_203: 8899314189445648268
+      DyingIcon_204: 3891881404832001058
+      DyingIcon_205: -7720612525299059251
+      DyingIcon_206: -4769580951267242651
+      DyingIcon_207: 5414412415036358368
+      DyingIcon_208: 6458579278439757890
+      DyingIcon_209: 1317781719755215826
+      DyingIcon_21: -2831321760377287146
+      DyingIcon_210: -4166735616052730742
+      DyingIcon_211: -4584498356579424685
+      DyingIcon_212: 5144796054992109678
+      DyingIcon_22: -2028607282934985645
+      DyingIcon_23: -546994595739001818
+      DyingIcon_24: 4218495813385670910
+      DyingIcon_25: -893410831767009311
+      DyingIcon_26: 7732717457978054312
+      DyingIcon_27: -5986693039325620745
+      DyingIcon_28: 4659549547021911810
+      DyingIcon_29: -3220630243932280138
+      DyingIcon_3: 750232928194354963
+      DyingIcon_30: -7567305336967597402
+      DyingIcon_31: 4091913582921208294
+      DyingIcon_32: 7724442342266213006
+      DyingIcon_33: 3904018316334638758
+      DyingIcon_34: -7575957402693703130
+      DyingIcon_35: 6405150638145019186
+      DyingIcon_36: 3807750629273426590
+      DyingIcon_37: 5705327922932877870
+      DyingIcon_38: 2415372276229574751
+      DyingIcon_39: -2651351260599278156
+      DyingIcon_4: -5887343042749452301
+      DyingIcon_40: 8661508604521035403
+      DyingIcon_41: 4557085523964832079
+      DyingIcon_42: 4711602957669982632
+      DyingIcon_43: 1731442677779016531
+      DyingIcon_44: 4708689215241231833
+      DyingIcon_45: 7893308160075996562
+      DyingIcon_46: -3390634181598701632
+      DyingIcon_47: -4352023382373527861
+      DyingIcon_48: -6101743014768056409
+      DyingIcon_49: -1683573005658818002
+      DyingIcon_5: -7873507092575897903
+      DyingIcon_50: 4702167440227148879
+      DyingIcon_51: 528174378750304044
+      DyingIcon_52: -1368509075694217883
+      DyingIcon_53: -4290288639728367226
+      DyingIcon_54: 2120934444204630228
+      DyingIcon_55: -585607166300678931
+      DyingIcon_56: -4933650543124250064
+      DyingIcon_57: 6157653367094709120
+      DyingIcon_58: 7148508726147209798
+      DyingIcon_59: -2505808324636315018
+      DyingIcon_6: -426684916162280535
+      DyingIcon_60: -2183399807208496087
+      DyingIcon_61: 5651868243542655198
+      DyingIcon_62: 1271216444019204277
+      DyingIcon_63: 171845869726562219
+      DyingIcon_64: -5749992733507498492
+      DyingIcon_65: 6720571001959515944
+      DyingIcon_66: 230887821180278481
+      DyingIcon_67: -2426153539560821777
+      DyingIcon_68: 56464815653993497
+      DyingIcon_69: -3751801054099863271
+      DyingIcon_7: 6752981501083700095
+      DyingIcon_70: -4291682597110777590
+      DyingIcon_71: -5681537043970653420
+      DyingIcon_72: 8287575854868404652
+      DyingIcon_73: 2680787104832807962
+      DyingIcon_74: 7328312268148651629
+      DyingIcon_75: -2529069434157785002
+      DyingIcon_76: -1371119522924434952
+      DyingIcon_77: 2696102387883118309
+      DyingIcon_78: 6588549241712146690
+      DyingIcon_79: -8088060391388705719
+      DyingIcon_8: 758348225592547698
+      DyingIcon_80: -3141542630902848305
+      DyingIcon_81: -4187162656992622844
+      DyingIcon_82: 3399495854883336055
+      DyingIcon_83: -5539763279594613292
+      DyingIcon_84: 2417989469355838502
+      DyingIcon_85: 94788758066972761
+      DyingIcon_86: -1343853552592179691
+      DyingIcon_87: 8905086540845648947
+      DyingIcon_88: 4880429198547295736
+      DyingIcon_89: 8707286661909181557
+      DyingIcon_9: -532267612915476800
+      DyingIcon_90: 837748157726619653
+      DyingIcon_91: 2482394331425238606
+      DyingIcon_92: -6577526104629088682
+      DyingIcon_93: 6430114251559111053
+      DyingIcon_94: -279103773646919992
+      DyingIcon_95: 4243898620430731965
+      DyingIcon_96: -4331424481835077336
+      DyingIcon_97: -7353785589797759252
+      DyingIcon_98: 4624730302965723960
+      DyingIcon_99: 292217516281654897
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

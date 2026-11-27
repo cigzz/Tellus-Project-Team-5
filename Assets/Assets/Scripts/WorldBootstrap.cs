@@ -62,6 +62,7 @@ namespace WorldSim
             tickEngine.Init(grid);
 
             // every tick, order matters
+            tickEngine.AddSystem(new InsolationSystem(Model));   // first: everything below reads this tick's sunlight
             tickEngine.AddSystem(new TemperatureSystem(Model));
             tickEngine.AddSystem(new WaterSystem(Model, water));
             tickEngine.AddSystem(new HumiditySystem(Model));
