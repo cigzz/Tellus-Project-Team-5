@@ -1558,7 +1558,8 @@ MonoBehaviour:
     IceFull: 1.5
     CanopyHidesSnow: 0.5
     MinAlbedo: 0.04
-  victoryMinCoverage: 0.5
+  victoryMinCoverage: 0.25
+  showTutorial: 1
 --- !u!114 &168468599
 MonoBehaviour:
   m_ObjectHideFlags: 0
