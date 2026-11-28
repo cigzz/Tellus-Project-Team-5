@@ -631,6 +631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05af3f6d1ff412a46ad04c1c8908849a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldSim.WorldBootstrap
+  evolutionMenuPrefab: {fileID: 7319652208413005141, guid: 7a4cb67b045d21849a03f81748dc3f0c, type: 3}
   clockTextGO: {fileID: 0}
   width: 256
   height: 144

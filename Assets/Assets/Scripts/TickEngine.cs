@@ -16,6 +16,7 @@ namespace WorldSim
         public bool Paused;
         public WorldGrid Grid { get; private set; }
         public int TickNumber { get; private set; }
+        public int SlowGroupInterval => slowGroupInterval;
 
         // Called after every tick (fast + slow, when it ran) finishes. Use this to trigger a redraw.
         public event Action OnTick;

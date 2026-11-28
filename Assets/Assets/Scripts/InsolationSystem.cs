@@ -11,9 +11,11 @@ namespace WorldSim
     // With no tilt Q = cos(phi), the old static map. The declination swings through the year:
     //   delta = SeasonTilt * sin(2 pi * tick / SeasonLengthTicks)
     // so one hemisphere gets long summer days and a high sun while the other gets winter, then they swap.
-    // Q is shaped the same way the old map was, so existing tuning carries over:
-    //   insolation = lerp(PoleSun, 1, Q^CosWeight * SunGain), capped to 0-1
-    // CosWeight < 1 flattens the drop-off toward the poles; 1 leaves the cosine as is.
+    // CosWeight shapes only the equinox (yearly-average) profile; the seasonal change is added on top as is:
+    //   S = cos(phi)^CosWeight + (Q - cos(phi))
+    //   insolation = lerp(PoleSun, 1, S * SunGain), capped to 0-1
+    // Applying CosWeight to Q itself (as before) inflated small polar values, so even a 5 deg tilt gave huge
+    // polar summers. SunGain above 1 saturates a wide tropical band at 1 (midlatitudes as hot as the equator).
     //
     // Sunlight depends only on latitude, so it is worked out once per row. Runs first in the fast group so
     // temperature, water and suitability all see this tick's sunlight.
@@ -56,8 +58,9 @@ namespace WorldSim
 
                 float h0 = Mathf.Acos(Mathf.Clamp(-Mathf.Tan(lat) * tanD, -1f, 1f));
                 float q = h0 * Mathf.Sin(lat) * sinD + Mathf.Cos(lat) * cosD * Mathf.Sin(h0);
-                q = Mathf.Pow(Mathf.Max(q, 0f), env.CosWeight);
-                float sun = Mathf.Lerp(env.PoleSun, 1f, q * env.SunGain); // Mathf.Lerp caps t to 0-1
+                float cosLat = Mathf.Cos(lat);
+                float s = Mathf.Pow(cosLat, env.CosWeight) + (q - cosLat);
+                float sun = Mathf.Lerp(env.PoleSun, 1f, s * env.SunGain); // Mathf.Lerp caps t to 0-1
 
                 int row = grid.Index(0, y);
                 for (int x = 0; x < grid.Width; x++) s0[row + x] = sun;

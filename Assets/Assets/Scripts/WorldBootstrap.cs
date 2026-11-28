@@ -35,10 +35,17 @@ namespace WorldSim
 
         [Header("Coverage victory")]
             [SerializeField, Range(0f, 1f)] float victoryMinCoverage = 0.4f;
+        [SerializeField] EndGameParams endGame = new EndGameParams();
         EndGameSystem endGameSystem;
+        public EndGameSystem EndGame => endGameSystem;
 
         [Header("Tutorial")]
         [SerializeField] bool showTutorial;
+
+        [Header("Evolution menu")]
+        [Tooltip("The EvolutionMenuRoot prefab (Images/UI ASSETS/Menu's). Spawned at start under the canvas of the " +
+                 "scene's \"Evolution\" button; the upgrade delay is set on the prefab.")]
+        [SerializeField] EvolutionMenu evolutionMenuPrefab;
 
         // Tiers, DNA and the latest planet stats live here. PlantPlacer and the evolution menu read it.
         public PlantModel Model { get; private set; }
@@ -63,22 +70,22 @@ namespace WorldSim
 
             // every tick, order matters
             tickEngine.AddSystem(new InsolationSystem(Model));   // first: everything below reads this tick's sunlight
-            tickEngine.AddSystem(new TemperatureSystem(Model));
+            tickEngine.AddSystem(new TemperatureSystem(Model, albedo));   // albedo: ice cover for the ice-surface cap
             tickEngine.AddSystem(new WaterSystem(Model, water));
             tickEngine.AddSystem(new HumiditySystem(Model));
-            tickEngine.AddSystem(new CarbonMixingSystem(Model));
 
             // slow tick: decides who lives, order matters
             tickEngine.AddSlowSystem(new SuitabilitySystem(Model));
             tickEngine.AddSlowSystem(new GrowthSystem(Model));
             tickEngine.AddSlowSystem(new SpreadSystem(Model));
+            tickEngine.AddSlowSystem(new CarbonSystem(Model));   // after growth and spread: decay, mixing, planet mean
             tickEngine.AddSlowSystem(new TerrainAlbedoSystem(Model, albedo));
             tickEngine.AddSlowSystem(new AggregateSystem(Model));
             tickEngine.AddSlowSystem(new WorldClock(clockTextGO, referenceTicksPerSecond));
             StatDisplayManager.SetModel(Model);
 
             // Check coverage
-            endGameSystem = new EndGameSystem(Model, tickEngine, victoryMinCoverage);
+            endGameSystem = new EndGameSystem(Model, tickEngine, victoryMinCoverage, endGame);
             tickEngine.AddSlowSystem(endGameSystem);
 
             // Redraw both views every tick.
@@ -89,10 +96,21 @@ namespace WorldSim
                 if (colorRenderer != null) colorRenderer.Draw(grid);
             };
 
+            EvolutionMenu.Spawn(evolutionMenuPrefab, Model, tickEngine); // before the tutorial, which looks for it
+
             if (showTutorial)
                 GameplayTutorial.TryStart(this, victoryMinCoverage);
         }
-    
+
+        // Keeps the read-only Survival Threshold current while editing (default tiers until the game starts).
+        void OnValidate()
+        {
+            if (Model != null) Model.UpdateSurvivalThreshold();
+            else if (growth != null)
+                growth.SurvivalThreshold = PlantModel.SurvivalThreshold(
+                    growth.R0 * new EvolutionModel().BuildTraits(growth.TraitStrength).GrowthMult, growth.Mu);
+        }
+
 //PRESS F9 TO WIN OR F10 TO LOSE OR IN GAMEMANAGER MENU
 #if UNITY_EDITOR
         void Update()

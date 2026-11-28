@@ -107,6 +107,17 @@ namespace WorldSim
         [SerializeField, Min(0f)] float pulseSpeed = 4f;
         [SerializeField, Range(0f, 1f)] float pulseMinAlpha = 0.45f;
 
+        [Header("Victory progress reset (shown until every victory condition is met again, overrides the death alert)")]
+        [SerializeField] GameObject lowCoverageResetIcon;
+        [SerializeField, TextArea(2, 4)] string lowCoverageResetText =
+            "Plant coverage dropped below the victory goal, so your progress restarted. Spread your plants back out.";
+        [SerializeField] GameObject tooColdResetIcon;
+        [SerializeField, TextArea(2, 4)] string tooColdResetText =
+            "Your plants got colder than the victory range, so your progress restarted. Warm the planet back up.";
+        [SerializeField] GameObject tooHotResetIcon;
+        [SerializeField, TextArea(2, 4)] string tooHotResetText =
+            "Your plants got hotter than the victory range, so your progress restarted. Cool the planet back down.";
+
         [Header("Icon and text per cause")]
         [SerializeField] CauseVisual[] causeVisuals = DefaultVisuals();
 
@@ -129,6 +140,7 @@ namespace WorldSim
         int windowDeaths;
         int holdLeft;
         Color baseColor;
+        EndGameSystem.ProgressReset resetShown;
 
         void Awake()
         {
@@ -147,11 +159,40 @@ namespace WorldSim
                 model.PlantDeathsReported += OnPlantDeaths;
             }
 
+            // Show which victory condition reset progress. Hidden after the player keeps playing past the ending
+            EndGameSystem endGame = bootstrap.EndGame;
+            resetShown = endGame == null || endGame.KeptPlaying ? EndGameSystem.ProgressReset.None : endGame.LastReset;
+            ShowReset(lowCoverageResetIcon, EndGameSystem.ProgressReset.LowCoverage, "Progress Reset: Low Coverage", lowCoverageResetText);
+            ShowReset(tooColdResetIcon, EndGameSystem.ProgressReset.TooCold, "Progress Reset: Too Cold", tooColdResetText);
+            ShowReset(tooHotResetIcon, EndGameSystem.ProgressReset.TooHot, "Progress Reset: Too Hot", tooHotResetText);
+
+            // A reset overrides the death alert. The alert comes back once the reset clears, if it is still active
+            SetActive(alertRoot, resetShown == EndGameSystem.ProgressReset.None && CurrentSeverity != Severity.None);
+
             if (pulseOnCritical && CurrentSeverity == Severity.Critical && icon != null)
             {
                 float a = Mathf.Lerp(pulseMinAlpha, 1f, 0.5f + 0.5f * Mathf.Sin(Time.unscaledTime * pulseSpeed));
                 icon.color = new Color(baseColor.r, baseColor.g, baseColor.b, baseColor.a * a);
             }
+        }
+
+        static void SetActive(GameObject target, bool on)
+        {
+            if (target != null && target.activeSelf != on) target.SetActive(on);
+        }
+
+        // Turns the reset icon on for its condition and puts the description in its hover pop-up
+        void ShowReset(GameObject target, EndGameSystem.ProgressReset kind, string title, string description)
+        {
+            if (target == null) return;
+            bool on = resetShown == kind;
+            SetActive(target, on);
+            if (!on) return;
+
+            TooltipTarget tip = target.GetComponentInChildren<TooltipTarget>();
+            if (tip == null) tip = target.AddComponent<TooltipTarget>();
+            tip.title = title;
+            tip.body = description;
         }
 
         void OnDestroy()
@@ -253,7 +294,7 @@ namespace WorldSim
             string title = v != null && !string.IsNullOrEmpty(v.title) ? v.title : cause.ToString();
             baseColor = ColorFor(rate);
 
-            if (alertRoot != null && !alertRoot.activeSelf) alertRoot.SetActive(true);
+            if (resetShown == EndGameSystem.ProgressReset.None) SetActive(alertRoot, true);
             if (icon != null)
             {
                 if (v != null && v.icon != null) icon.sprite = v.icon;
@@ -261,7 +302,7 @@ namespace WorldSim
             }
             if (label != null)
             {
-                label.text = $"{title}  -{rate * 100f:0.#}%";
+                label.text = $"{title}\n-{rate * 100f:0.#}%";
                 label.color = baseColor;
             }
             if (tooltip != null)

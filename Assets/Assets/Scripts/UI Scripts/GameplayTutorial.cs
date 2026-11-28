@@ -131,7 +131,7 @@ namespace WorldSim
                         "Move the Speed slider in the top-right to speed up or slow down time.");
                     break;
                 case Step.Evolution:
-                    evolution = FindAnyObjectByType<EvolutionMenu>();
+                    evolution = FindAnyObjectByType<EvolutionMenu>(FindObjectsInactive.Include); // hidden while closed
                     openedEvolution = evolution != null && evolution.IsOpen;
                     SetCopy("Explore Evolution",
                         "DNA lets you change traits such as canopy and spread. A trait can help your plants in one set of conditions and come with a trade-off in another.",

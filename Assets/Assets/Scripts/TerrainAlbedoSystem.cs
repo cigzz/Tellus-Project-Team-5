@@ -24,7 +24,8 @@ namespace WorldSim
         [Header("Ice and snow brighten it (global ice-albedo feedback)")]
         public float IceAlbedo = 0.55f;
         public float IceFull = 1.5f;        // ice amount that fully covers a bare tile (low = runaway ice ages)
-        [Range(0f, 1f)] public float CanopyHidesSnow = 0.5f; // dense canopy pokes through snow
+        [Tooltip("Share of the snow and ice albedo hidden where leaves fully cover the ground (dense canopy pokes through snow).")]
+        [Range(0f, 1f)] public float CanopyHidesSnow = 0.5f;
 
         [Header("Limits")]
         public float MinAlbedo = 0.04f;     // the top limit is EnvParams.AMax
@@ -34,8 +35,10 @@ namespace WorldSim
     //
     //   base   = lerp(LowlandAlbedo, HighlandAlbedo, heightNorm ^ HeightCurve)      low = dark, high = bright
     //   wet    = lerp(base, WaterAlbedo, waterCover)                                pooled water darkens basins
-    //   plants = wet + Ka * canopy * B * (pigmentation - PRef)                     same plant term as before
-    //   final  = lerp(plants, IceAlbedo, iceCover * (1 - CanopyHidesSnow * canopy * B))
+    //   plants = wet + Ka * (pigmentation - PRef) * cover                         cover = PlantTraits.GroundCover(B)
+    //   final  = lerp(plants, IceAlbedo, iceCover * (1 - CanopyHidesSnow * cover))
+    //
+    // cover saturates toward 1, so a bigger canopy reaches its full albedo effect (and hides snow) at a lower biomass.
     //
     // Call Initialize() BEFORE PlantModel.InitGrid so starting temperatures use the terrain albedo.
     public class TerrainAlbedoSystem : ITickSystem
@@ -80,7 +83,7 @@ namespace WorldSim
             float[] ice = g.GetField("ice");
             float[] A = g.GetField("albedo");
 
-            float plantGain = e.Ka * tr.Canopy * (tr.Pigmentation - e.PRef);
+            float plantGain = e.Ka * (tr.Pigmentation - e.PRef);
 
             for (int i = 0; i < g.CellCount; i++)
             {
@@ -89,10 +92,10 @@ namespace WorldSim
                 float waterCover = p.MaxWaterCover * TerrainFields.Ramp(W[i], p.WetFrom, p.WetFull);
                 a = Mathf.Lerp(a, p.WaterAlbedo, waterCover);
 
-                a += plantGain * B[i];
+                float cover = tr.GroundCover(B[i]);
+                a += plantGain * cover;
 
-                float canopy = Mathf.Clamp01(tr.Canopy * B[i]);
-                float iceCover = Mathf.Clamp01(ice[i] / p.IceFull) * (1f - p.CanopyHidesSnow * canopy);
+                float iceCover = Mathf.Clamp01(ice[i] / p.IceFull) * (1f - p.CanopyHidesSnow * cover);
                 a = Mathf.Lerp(a, p.IceAlbedo, iceCover);
 
                 A[i] = Mathf.Clamp(a, p.MinAlbedo, e.AMax);

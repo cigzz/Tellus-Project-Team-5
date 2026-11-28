@@ -129,9 +129,7 @@ namespace WorldSim
             meanHumidity /= grid.CellCount;
 
             float vapourWarming = p.VapourGreenhouse * Mathf.Log(Mathf.Max(meanHumidity, 0.005f) / p.VapourReference);
-            // TemperatureSystem relaxes toward its equilibrium by Lambda each tick, so nudging by
-            // Lambda * X every tick shifts every tile's steady temperature by X.
-            float globalNudge = env.Lambda * vapourWarming;
+            // TemperatureSystem adds this to every tile's target temperature (read from WaterSystem.Latest).
             float rainMult = DroughtMultiplier(tickNumber, difficulty);
 
             // ---- 2. local exchange
@@ -143,12 +141,13 @@ namespace WorldSim
                 float w = water[i];
                 float deficit = Mathf.Clamp01(1f - h / cap); // dry air pulls water up, saturated air doesn't
 
-                // Evaporation: grows exponentially with warmth, scaled by difficulty, shaded by canopy.
+                // Evaporation: grows exponentially with warmth, scaled by difficulty, cut by up to 40% under full leaf cover.
                 float boost = Mathf.Min(Mathf.Exp(p.EvapGrowth * (temp - 15f)), p.EvapMaxBoost);
                 if (temp <= 0f) boost *= p.FrozenEvapFactor;
-                float canopyBiomass = traits.Canopy * biomass[i];
-                float evaporation = env.Ke * difficulty * boost * w * deficit * (1f - 0.4f * canopyBiomass);
-                float transpiration = env.Kt * traits.Transpiration * canopyBiomass * w * deficit;
+                float b = biomass[i];
+                float evaporation = env.Ke * difficulty * boost * w * deficit * (1f - 0.4f * traits.GroundCover(b));
+                // Transpiration: plants draw soil water up through their leaves, so it scales with leaf area (canopy * biomass).
+                float transpiration = env.Kt * traits.Transpiration * traits.LeafArea(b) * w * deficit;
                 float lift = Mathf.Min(evaporation + transpiration, w);
                 // Ice sublimates slowly into dry air, so cold traps don't swallow the planet's water for good.
                 float subDeficit = Mathf.Max(deficit, p.SublimationMinDeficit);
@@ -185,8 +184,8 @@ namespace WorldSim
                 w += spring - seep;
                 ground[i] += seep - spring;
 
-                // Latent heat: evaporating cools the tile, condensing warms it. Plus the global vapour greenhouse.
-                temperature[i] += p.LatentHeat * (rain - lift - sublimate) + globalNudge;
+                // Latent heat: evaporating cools the tile, condensing warms it.
+                temperature[i] += p.LatentHeat * (rain - lift - sublimate);
 
                 water[i] = Mathf.Max(w, 0f);
                 humidity[i] = Mathf.Max(h, 0f);
